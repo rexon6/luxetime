@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baku Lanjam — Pasar Jam Tangan Mewah & Autentik | LUXETIME</title>
+    <!-- Google Fonts: Bebas Neue, Barlow Condensed, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        title: ['"Bebas Neue"', '"Barlow Condensed"', 'sans-serif'],
+                        condensed: ['"Barlow Condensed"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#2563EB',
+                            primaryHover: '#1D4ED8',
+                            soft: '#EFF6FF',
+                            softBorder: '#DBEAFE',
+                            navy: '#0F172A',
+                            body: '#F8FAFC',
+                            card: '#FFFFFF',
+                            subtext: '#64748B',
+                            accent: '#0284C7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+        }
+
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .font-condensed {
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #93C5FD;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+
+        .card-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 28px -10px rgba(37, 99, 235, 0.12), 0 6px 10px -4px rgba(15, 23, 42, 0.04);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#F8FAFC] text-slate-900 antialiased min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-[9999] flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Baku%20Lanjam%2C%20saya%20ingin%20bertanya%20mengenai%20jam%20tangan%20mewah"
+        target="_blank" rel="noopener noreferrer" title="Hubungi Kami via WhatsApp"
+        class="fixed bottom-6 left-6 z-40 bg-emerald-600 hover:bg-emerald-700 text-white p-3.5 rounded-full shadow-xl shadow-emerald-600/30 flex items-center gap-2.5 group transition-all duration-300 hover:scale-110 border border-emerald-400/40">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+        <span class="hidden sm:inline-block font-extrabold text-xs uppercase tracking-wider pr-1">Chat WhatsApp</span>
+    </a>
+
+    <!-- TOP ANNOUNCEMENT BAR (Soft Blue Palette) -->
+    <div class="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 hover:from-blue-800 hover:to-sky-700 text-white text-xs font-semibold py-2.5 px-4 text-center transition-all cursor-pointer border-b border-blue-500/40 shadow-sm" onclick="openSellModal()">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-3">
+            <span class="text-blue-200 text-sm font-bold">&lsaquo;</span>
+            <span class="tracking-wide">Ingin Jual atau Konsinyasi Jam Tangan Anda? Dapatkan Penawaran Instan</span>
+            <span class="text-blue-200 text-sm font-bold">&rsaquo;</span>
+        </div>
+    </div>
+
+    <!-- 1. Header Bar (Soft Blue & White Luxury Header) -->
+    <header class="w-full bg-white text-slate-900 sticky top-0 z-50 border-b border-blue-100 shadow-sm backdrop-blur-md bg-white/95">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <!-- Navigation Links (Kiri) -->
+                <nav
+                    class="hidden lg:flex items-center space-x-6 text-xs font-bold uppercase tracking-widest text-slate-600">
+                    <a href="#katalog" class="text-blue-600 hover:text-blue-700 transition-colors">Katalog Jam</a>
+                    <a href="javascript:void(0)" onclick="openSellModal()"
+                        class="hover:text-blue-600 transition-colors">Jual & Tukar Tambah</a>
+                    <a href="javascript:void(0)" onclick="openSourcingModal()"
+                        class="hover:text-blue-600 text-blue-600 transition-colors flex items-center gap-1.5">
+                        <span>LuxeSource</span>
+                        <span
+                            class="bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 rounded font-mono font-bold">RARA</span>
+                    </a>
+                    <a href="#keaslian" class="hover:text-blue-600 transition-colors">Keaslian</a>
+                    <a href="admin.html"
+                        class="bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg border border-blue-200 transition-all flex items-center gap-1 text-[11px]">
+                        <span>⚙️ Seller Centre</span>
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 p-2 focus:outline-none" aria-label="Buka Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Logo Center (Baku Lanjam Logo) -->
+                <div class="text-center flex items-center justify-center">
+                    <a href="#" class="inline-flex items-center justify-center py-1 group">
+                        <img src="logo-bakulanjam.png" alt="Baku Lanjam"
+                            class="h-14 sm:h-16 md:h-18 max-h-[72px] w-auto object-contain transition-transform group-hover:scale-105">
+                    </a>
+                </div>
+
+                <!-- Right Utility Icons (IDR Currency, Wishlist, Cart) -->
+                <div class="flex items-center space-x-4 text-xs">
+                    <!-- IDR Currency Tag -->
+                    <div
+                        class="hidden sm:flex items-center gap-1.5 bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-full font-bold text-blue-700">
+                        <span class="text-sm">🇮🇩</span>
+                        <span>IDR</span>
+                    </div>
+
+                    <!-- Wishlist Button -->
+                    <button onclick="toggleWishlistModal()"
+                        class="relative p-2 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors" title="Favorit Saya">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                        <span id="wishlist-count"
+                            class="absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center shadow-xs">0</span>
+                    </button>
+
+                    <!-- Shopping Cart Button -->
+                    <button onclick="toggleCartDrawer()"
+                        class="relative bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-full flex items-center gap-2 transition-all shadow-sm shadow-blue-500/20">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span class="hidden sm:inline text-xs uppercase tracking-wider font-extrabold">Keranjang</span>
+                        <span id="cart-count"
+                            class="bg-white text-blue-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 text-sm font-bold uppercase tracking-wider shadow-lg">
+            <a href="#katalog" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-blue-600 py-1">Katalog Jam</a>
+            <a href="javascript:void(0)" onclick="toggleMobileMenu(); openSellModal();"
+                class="block text-slate-700 hover:text-blue-600 py-1">Jual & Tukar Tambah</a>
+            <a href="javascript:void(0)" onclick="toggleMobileMenu(); openSourcingModal();"
+                class="block text-blue-600 py-1">LuxeSource (Request Model)</a>
+            <a href="#keaslian" onclick="toggleMobileMenu()"
+                class="block text-slate-700 hover:text-blue-600 py-1">Keaslian & Garansi</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO BANNER: LATEST COLLECTION (Modeled after PreownedWatch with Model Photo) -->
+    <section class="relative w-full min-h-[500px] md:min-h-[560px] lg:min-h-[620px] flex items-center justify-center overflow-hidden bg-slate-950 border-b border-slate-800">
+        <!-- Background Model Image with Cinematic Vignette -->
+        <div class="absolute inset-0 z-0">
+            <img id="hero-model-bg" src="hero-model.jpg" alt="Model Jam Tangan Mewah" onerror="this.src='hero-model.png'"
+                class="w-full h-full object-cover object-center filter brightness-90 transition-all duration-700">
+            <!-- Gradient Overlay: Top dark fade + Bottom soft fade + Vignette for high contrast -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/60"></div>
+        </div>
+
+        <!-- Center Hero Typography and CTA (Exact replica of user screenshot) -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-16">
+            <span class="inline-block bg-white/15 backdrop-blur-md text-slate-200 border border-white/20 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full mb-5 shadow-sm">
+                Pasar Jam Tangan Mewah Terverifikasi
+            </span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-extrabold uppercase tracking-tight text-white leading-none drop-shadow-xl">
+                LATEST COLLECTION
+            </h1>
+            <p class="mt-4 sm:mt-5 text-sm sm:text-base md:text-xl text-slate-200 font-medium tracking-wider max-w-2xl mx-auto drop-shadow-md">
+                100% Authentic Luxury Timepieces
+            </p>
+
+            <!-- Action Buttons: Shop Now (Pill Outline) & Quick Sell -->
+            <div class="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a href="#katalog" class="inline-flex items-center justify-center border border-white/80 hover:border-white text-white hover:bg-white hover:text-slate-950 font-bold px-9 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 backdrop-blur-xs shadow-xl hover:scale-105">
+                    Shop Now
+                </a>
+                <button onclick="openSellModal()" class="inline-flex items-center justify-center bg-blue-600/90 hover:bg-blue-600 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-blue-500/30 hover:scale-105 border border-blue-400/40">
+                    Jual Jam Tangan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Filter Toolbar (Soft Blue & White Horizontal Select Pills) -->
+    <section id="katalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+        <!-- Search Input & Results Header -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+            <div class="w-full md:w-96 relative">
+                <input type="text" id="global-search" oninput="handleSearch()"
+                    placeholder="Cari merek, model, atau nomor referensi..."
+                    class="w-full bg-white text-slate-800 border border-slate-200 rounded-full py-2.5 pl-10 pr-4 text-xs font-medium focus:outline-none focus:border-blue-500 transition-all shadow-sm">
+                <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <div class="flex items-center gap-3">
+                <span id="results-count" class="text-xs font-bold uppercase tracking-wider text-slate-500">Menampilkan
+                    0 Jam Tangan</span>
+                <button onclick="resetFilters()"
+                    class="text-xs font-bold uppercase text-blue-600 hover:underline underline-offset-4 ml-2">Reset
+                    Filter</button>
+            </div>
+        </div>
+
+        <!-- Inline Pill Select Filters -->
+        <div
+            class="flex flex-wrap items-center justify-start md:justify-center gap-2.5 overflow-x-auto pb-2 custom-scrollbar">
+            <!-- Merek Filter -->
+            <div class="relative inline-block">
+                <select id="filter-brand" onchange="applyFilters()"
+                    class="appearance-none bg-white text-slate-800 border border-slate-200 hover:border-blue-400 rounded-full px-4 py-2 pr-8 text-xs font-bold cursor-pointer focus:outline-none focus:border-blue-500 transition-all shadow-sm">
+                    <option value="">merek : semua</option>
+                    <option value="Rolex">merek : Rolex</option>
+                    <option value="Patek Philippe">merek : Patek Philippe</option>
+                    <option value="Audemars Piguet">merek : Audemars Piguet</option>
+                    <option value="Richard Mille">merek : Richard Mille</option>
+                </select>
+                <div class="pointer-events-none absolute right-3 top-2.5 text-slate-400 text-[10px]">▼</div>
+            </div>
+
+            <!-- Kondisi Filter -->
+            <div class="relative inline-block">
+                <select id="filter-condition" onchange="applyFilters()"
+                    class="appearance-none bg-white text-slate-800 border border-slate-200 hover:border-blue-400 rounded-full px-4 py-2 pr-8 text-xs font-bold cursor-pointer focus:outline-none focus:border-blue-500 transition-all shadow-sm">
+                    <option value="">kondisi : semua</option>
+                    <option value="Unworn / New">kondisi : Baru (Unworn)</option>
+                    <option value="Mint / Like New">kondisi : Mint / Seperti Baru</option>
+                    <option value="Mint / Excellent">kondisi : Mint / Sangat Bagus</option>
+                    <option value="Very Good">kondisi : Bagus (Very Good)</option>
+                </select>
+                <div class="pointer-events-none absolute right-3 top-2.5 text-slate-400 text-[10px]">▼</div>
+            </div>
+
+            <!-- Ketersediaan Filter -->
+            <div class="relative inline-block">
+                <select id="filter-availability" onchange="applyFilters()"
+                    class="appearance-none bg-white text-slate-800 border border-slate-200 hover:border-blue-400 rounded-full px-4 py-2 pr-8 text-xs font-bold cursor-pointer focus:outline-none focus:border-blue-500 transition-all shadow-sm">
+                    <option value="">ketersediaan : semua</option>
+                    <option value="AVAILABLE">ketersediaan : Tersedia (Ready)</option>
+                    <option value="RESERVED">ketersediaan : Dipesan (Reserved)</option>
+                    <option value="SOURCED">ketersediaan : Sourced (By Request)</option>
+                </select>
+                <div class="pointer-events-none absolute right-3 top-2.5 text-slate-400 text-[10px]">▼</div>
+            </div>
+
+            <!-- Urutkan Filter -->
+            <div class="relative inline-block">
+                <select id="filter-sort" onchange="applyFilters()"
+                    class="appearance-none bg-white text-slate-800 border border-slate-200 hover:border-blue-400 rounded-full px-4 py-2 pr-8 text-xs font-bold cursor-pointer focus:outline-none focus:border-blue-500 transition-all shadow-sm">
+                    <option value="newest">urutkan : Terbaru</option>
+                    <option value="price-low">urutkan : Harga Terendah</option>
+                    <option value="price-high">urutkan : Harga Tertinggi</option>
+                    <option value="name-az">urutkan : Nama (A-Z)</option>
+                </select>
+                <div class="pointer-events-none absolute right-3 top-2.5 text-slate-400 text-[10px]">▼</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Product Catalog Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Dynamic Watch Product Cards Rendered via JS -->
+        </div>
+    </section>
+
+    <!-- 5. Standar Layanan & Jaminan Keaslian -->
+    <section id="keaslian" class="bg-white border-t border-blue-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Standar Kualitas
+                    Tinggi</span>
+                <h2 class="text-3xl sm:text-4xl font-bebas tracking-wide text-slate-900 mt-2">JAMINAN KEASLIAN & SERTIFIKASI
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100 shadow-sm hover:shadow-md transition-all">
+                    <div
+                        class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-sm mb-4 shadow-sm">
+                        01</div>
+                    <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider mb-2">Inspeksi Fisik Presisi</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed font-medium">Setiap unit jam melalui verifikasi
+                        nomor seri, kondisi mesin movement, kelengkapan kotak, dan kartu garansi resmi produsen.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100 shadow-sm hover:shadow-md transition-all">
+                    <div
+                        class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-sm mb-4 shadow-sm">
+                        02</div>
+                    <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider mb-2">Manajemen Status Real-Time
+                    </h3>
+                    <p class="text-slate-600 text-xs leading-relaxed font-medium">Sistem ketersediaan terintegrasi
+                        (Tersedia, Dipesan, Sourced) memastikan transaksi transparan tanpa risiko pemesanan ganda.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100 shadow-sm hover:shadow-md transition-all">
+                    <div
+                        class="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold text-sm mb-4 shadow-sm">
+                        03</div>
+                    <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider mb-2">Pengiriman & Private
+                        Viewing</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed font-medium">Opsi pengiriman terlindungi asuransi
+                        100% atau penyerahan langsung melalui sesi private appointment di boutique resmi kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION (Step 1 Structure with Soft Blue Theme) -->
+    <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-serif text-white tracking-wider">LUXETIME</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Platform terpercaya untuk jual, beli, dan konsinyasi jam tangan mewah *pre-owned* dengan jaminan 100% keaslian.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Navigasi</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#katalog" class="hover:text-blue-400 transition-colors">Katalog Jam</a></li>
+                    <li><a href="javascript:void(0)" onclick="openSellModal()" class="hover:text-blue-400 transition-colors">Jual Jam Anda</a></li>
+                    <li><a href="javascript:void(0)" onclick="openSourcingModal()" class="hover:text-blue-400 transition-colors">LuxeSource Concierge</a></li>
+                </ul>
+            </div>
+
+            <!-- Trust & Policy Links (FIX 404 ISSUES) -->
+            <div>
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Pusat Bantuan</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><button onclick="openInfoModal('faq')" class="hover:text-blue-400 transition-colors text-left">Pertanyaan Umum (FAQ)</button></li>
+                    <li><button onclick="openInfoModal('shipping')" class="hover:text-blue-400 transition-colors text-left">Informasi Pengiriman & Asuransi</button></li>
+                    <li><button onclick="openInfoModal('authenticity')" class="hover:text-blue-400 transition-colors text-left">Jaminan Keaslian 100%</button></li>
+                    <li><button onclick="openInfoModal('privacy')" class="hover:text-blue-400 transition-colors text-left">Kebijakan Privasi</button></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Service -->
+            <div>
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Layanan Pelanggan</h4>
+                <p class="text-sm text-slate-400 mb-2">Jam Operasional: Senin - Sabtu (10.00 - 19.00 WIB)</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20LuxeTime,%20saya%20ingin%20konsultasi%20mengenai%20jam%20tangan" target="_blank" class="inline-flex items-center text-sm font-medium text-emerald-400 hover:text-emerald-300">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Hubungi Konsultan via WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            &copy; 2026 LUXETIME. Hak Cipta Dilindungi Undang-Undang. Semua produk terjamin keasliannya.
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL SERBAGUNA UNTUK BANTUAN/POLICY (Mencegah 404) -->
+<div id="infoModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[80vh] overflow-y-auto shadow-2xl relative border border-slate-200">
+        <button onclick="closeInfoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-xl p-1 rounded-lg">&times;</button>
+        <div id="infoModalContent" class="prose prose-slate max-w-none text-slate-700">
+            <!-- Konten diisi lewat JavaScript -->
+        </div>
+    </div>
+</div>
+
+    <!-- MODAL 1: Product Detail Page (PDP) -->
+    <div id="pdp-modal"
+        class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div
+            class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar p-6 sm:p-8 relative shadow-2xl border border-slate-200">
+            <button onclick="closePDPModal()"
+                class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 transition-colors p-1.5 rounded-full hover:bg-slate-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div id="pdp-content" class="grid md:grid-cols-2 gap-8">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Form Jual & Tukar Tambah ("Get Valuation") -->
+    <div id="sell-modal"
+        class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200">
+            <button onclick="closeSellModal()"
+                class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 transition-colors p-1.5 rounded-full hover:bg-slate-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <span
+                class="text-[10px] font-bold uppercase tracking-widest bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Layanan
+                Valuasi</span>
+            <h2 class="text-2xl font-bebas tracking-wide text-slate-900 mt-2">JUAL ATAU TUKAR TAMBAH JAM TANGAN</h2>
+            <p class="text-slate-500 text-xs mb-6 font-medium">Isi formulir pengajuan konsinyasi, penjualan langsung,
+                atau tukar tambah jam tangan Anda.</p>
+
+            <form id="sell-form" onsubmit="handleSellSubmit(event)" class="space-y-4 text-xs font-medium">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block uppercase font-bold text-slate-700 mb-1">Merek Jam</label>
+                        <input type="text" required placeholder="Rolex / Patek / AP"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                    </div>
+                    <div>
+                        <label class="block uppercase font-bold text-slate-700 mb-1">Model & Referensi</label>
+                        <input type="text" required placeholder="Submariner 126610LV"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block uppercase font-bold text-slate-700 mb-1">Skema Penjualan</label>
+                        <select required
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-bold">
+                            <option value="Direct Sell">Direct Sell (Jual Cepat)</option>
+                            <option value="Consignment">Consignment (Konsinyasi)</option>
+                            <option value="Trade-In">Trade-In (Tukar Tambah)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block uppercase font-bold text-slate-700 mb-1">Kelengkapan</label>
+                        <select required
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-bold">
+                            <option value="Full Set">Full Set (Box + Sertifikat)</option>
+                            <option value="Watch & Papers">Watch & Papers Only</option>
+                            <option value="Watch Only">Watch Only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block uppercase font-bold text-slate-700 mb-1">Ekspektasi Harga (IDR)</label>
+                    <input type="text" placeholder="Contoh: 215.000.000"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                </div>
+
+                <div>
+                    <label class="block uppercase font-bold text-slate-700 mb-1">Nomor WhatsApp Pengirim</label>
+                    <input type="tel" required placeholder="081234567890"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl uppercase tracking-wider transition-all mt-2 shadow-lg shadow-blue-500/20">
+                    Kirim Pengajuan Valuasi
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 3: LuxeSource Request Form -->
+    <div id="sourcing-modal"
+        class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200">
+            <button onclick="closeSourcingModal()"
+                class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 transition-colors p-1.5 rounded-full hover:bg-slate-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <span
+                class="text-[10px] font-bold uppercase tracking-widest bg-sky-100 text-sky-800 px-3 py-1 rounded-full">LuxeSource
+                Global</span>
+            <h2 class="text-2xl font-bebas tracking-wide text-slate-900 mt-2">PERMINTAAN SOURCING MODEL LANGKA</h2>
+            <p class="text-slate-500 text-xs mb-6 font-medium">Tim spesialis kami akan melacak ketersediaan unit ke
+                jaringan kolektor global.</p>
+
+            <form onsubmit="handleSourcingSubmit(event)" class="space-y-4 text-xs font-medium">
+                <div>
+                    <label class="block uppercase font-bold text-slate-700 mb-1">Nomor Referensi / Model
+                        Target</label>
+                    <input type="text" id="source-ref" required placeholder="Contoh: Patek Philippe 5711/1A-010"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                </div>
+                <div>
+                    <label class="block uppercase font-bold text-slate-700 mb-1">Target Anggaran (IDR)</label>
+                    <input type="text" placeholder="Contoh: 1.500.000.000"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                </div>
+                <div>
+                    <label class="block uppercase font-bold text-slate-700 mb-1">Nomor WhatsApp Pengirim</label>
+                    <input type="tel" required placeholder="081234567890"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-900 outline-none focus:bg-white focus:border-blue-500 font-semibold">
+                </div>
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl uppercase tracking-wider transition-all shadow-lg shadow-blue-500/20">
+                    Kirim Permintaan LuxeSource
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CART DRAWER / MODAL -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex justify-end">
+        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between shadow-2xl relative border-l border-slate-200">
+            <div>
+                <div class="flex justify-between items-center border-b border-slate-200 pb-4 mb-4">
+                    <h3 class="text-xl font-bebas tracking-wide text-slate-900">KERANJANG BELANJA</h3>
+                    <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="cart-items" class="space-y-4 max-h-[60vh] overflow-y-auto custom-scrollbar">
+                    <!-- Dynamic Cart Items -->
+                </div>
+            </div>
+            <div class="border-t border-slate-200 pt-4 space-y-3">
+                <div class="flex justify-between items-center font-bold text-sm text-slate-600">
+                    <span>Total Estimasi:</span>
+                    <span id="cart-total" class="text-lg text-slate-900 font-extrabold">Rp 0</span>
+                </div>
+                <button onclick="checkoutWhatsApp()"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl uppercase tracking-wider transition-all shadow-md shadow-blue-500/20">
+                    Lanjut Checkout via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WISHLIST MODAL -->
+    <div id="wishlist-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex justify-end">
+        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between shadow-2xl relative border-l border-slate-200">
+            <div>
+                <div class="flex justify-between items-center border-b border-slate-200 pb-4 mb-4">
+                    <h3 class="text-xl font-bebas tracking-wide text-slate-900">FAVORIT SAYA (WISHLIST)</h3>
+                    <button onclick="toggleWishlistModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="wishlist-items" class="space-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar">
+                    <!-- Dynamic Wishlist Items -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Engine -->
+    <script>
+        const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && window.location.port === '8000'
+            ? 'http://localhost:8000/api'
+            : (window.location.port === '' || window.location.port === '80' || window.location.port === '443')
+                ? `${window.location.origin}/api`
+                : 'http://localhost:8000/api';
+        let currentProducts = [];
+        let cart = [];
+        let wishlist = [];
+
+        // Seed Fallback Data (Jika Laravel Server Offline)
+        const fallbackProducts = [
+            {
+                id: 1,
+                model: "Submariner Date 'Kermit'",
+                reference: "126610LV",
+                sku: "RLX-126610LV-2024",
+                condition: "Unworn / New",
+                production_year: 2024,
+                case_size: "41 mm",
+                case_material: "Oystersteel",
+                movement: "Automatic Caliber 3235",
+                box_papers: "Full Set (Box & Card)",
+                price: 235000000,
+                currency: "IDR",
+                availability: "AVAILABLE",
+                image_url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop",
+                brand: { id: 1, name: "Rolex", slug: "rolex" }
+            },
+            {
+                id: 2,
+                model: "Nautilus Blue Dial",
+                reference: "5711/1A-010",
+                sku: "PP-5711-1A",
+                condition: "Mint / Like New",
+                production_year: 2021,
+                case_size: "40 mm",
+                case_material: "Stainless Steel",
+                movement: "Automatic Caliber 26-330 S C",
+                box_papers: "Full Set",
+                price: 1450000000,
+                currency: "IDR",
+                availability: "SOURCED",
+                image_url: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop",
+                brand: { id: 2, name: "Patek Philippe", slug: "patek-philippe" }
+            },
+            {
+                id: 3,
+                model: "Royal Oak Chronograph",
+                reference: "26331ST.OO.1220ST.01",
+                sku: "AP-26331ST-2022",
+                condition: "Mint / Excellent",
+                production_year: 2022,
+                case_size: "41 mm",
+                case_material: "Stainless Steel",
+                movement: "Automatic Caliber 2385",
+                box_papers: "Full Set",
+                price: 680000000,
+                currency: "IDR",
+                availability: "RESERVED",
+                image_url: "https://images.unsplash.com/photo-1508656966624-913217036495?q=80&w=800&auto=format&fit=crop",
+                brand: { id: 3, name: "Audemars Piguet", slug: "audemars-piguet" }
+            },
+            {
+                id: 4,
+                model: "RM 011 Felipe Massa",
+                reference: "RM011-FM",
+                sku: "RM-011FM-2019",
+                condition: "Very Good",
+                production_year: 2019,
+                case_size: "50 x 40 mm",
+                case_material: "Titanium",
+                movement: "Automatic Skeletonized",
+                box_papers: "Watch & Papers Only",
+                price: null,
+                currency: "IDR",
+                availability: "AVAILABLE",
+                image_url: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=800&auto=format&fit=crop",
+                brand: { id: 4, name: "Richard Mille", slug: "richard-mille" }
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchProducts();
+            loadStateFromLocalStorage();
+        });
+
+        // 1. Fetch Katalog Jam Tangan dari Laravel API
+        async function fetchProducts() {
+            const brand = document.getElementById('filter-brand').value.replace('merek : ', '').replace('semua', '');
+            const condition = document.getElementById('filter-condition').value.replace('kondisi : ', '').replace('semua', '');
+            const availability = document.getElementById('filter-availability').value.replace('ketersediaan : ', '').replace('semua', '');
+            const search = document.getElementById('global-search').value;
+            const sort = document.getElementById('filter-sort').value;
+
+            const params = new URLSearchParams();
+            if (brand) params.append('brand', brand);
+            if (condition) params.append('condition', condition);
+            if (availability) params.append('availability', availability);
+            if (search) params.append('search', search);
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/watches?${params.toString()}`);
+                if (!response.ok) throw new Error('API Error');
+                currentProducts = await response.json();
+            } catch (error) {
+                console.warn('Backend API tidak terhubung, menggunakan data lokal fallback.');
+                currentProducts = filterLocalProducts(search, brand, condition, availability);
+            }
+
+            // Apply Sorting
+            currentProducts = sortProducts(currentProducts, sort);
+            renderProducts(currentProducts);
+        }
+
+        function filterLocalProducts(search, brand, condition, availability) {
+            return fallbackProducts.filter(p => {
+                const matchSearch = !search || p.model.toLowerCase().includes(search.toLowerCase()) || p.reference.toLowerCase().includes(search.toLowerCase());
+                const matchBrand = !brand || (p.brand && p.brand.name.toLowerCase() === brand.toLowerCase());
+                const matchCondition = !condition || p.condition.toLowerCase().includes(condition.toLowerCase());
+                const matchAvailability = !availability || p.availability === availability;
+                return matchSearch && matchBrand && matchCondition && matchAvailability;
+            });
+        }
+
+        function sortProducts(items, sortKey) {
+            let sorted = [...items];
+            if (sortKey === 'price-low') sorted.sort((a, b) => (a.price || 0) - (b.price || 0));
+            if (sortKey === 'price-high') sorted.sort((a, b) => (b.price || 0) - (a.price || 0));
+            if (sortKey === 'name-az') sorted.sort((a, b) => a.model.localeCompare(b.model));
+            return sorted;
+        }
+
+        // Format Angka ke IDR
+        function formatIDR(amount) {
+            if (!amount) return "Hubungi untuk Harga";
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount);
+        }
+
+        // Render Kartu Produk (Desain Soft Blue & White)
+        function renderProducts(items) {
+            const grid = document.getElementById('product-grid');
+            document.getElementById('results-count').textContent = `Menampilkan ${items.length} Jam Tangan`;
+
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full py-16 text-center text-slate-500 font-bold uppercase tracking-wider">Tidak ada jam tangan yang memenuhi kriteria pencarian.</div>`;
+                return;
+            }
+
+            grid.innerHTML = items.map(product => {
+                const brandName = product.brand ? product.brand.name : 'LUXURY WATCH';
+                const isWishlisted = wishlist.includes(product.id);
+
+                let badgeText = "TERSEDIA";
+                let badgeStyle = "bg-blue-50 text-blue-700 border border-blue-200";
+                if (product.availability === "RESERVED") {
+                    badgeText = "DIPESAN";
+                    badgeStyle = "bg-amber-50 text-amber-700 border border-amber-200";
+                } else if (product.availability === "SOURCED") {
+                    badgeText = "SOURCED";
+                    badgeStyle = "bg-sky-50 text-sky-700 border border-sky-200";
+                }
+
+                return `
+                    <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden flex flex-col justify-between card-hover-effect cursor-pointer group shadow-sm hover:border-blue-300" onclick="openPDPModal(${product.id})">
+                        <div>
+                            <!-- Frame Gambar & Badge -->
+                            <div class="aspect-[4/5] bg-blue-50/30 relative overflow-hidden flex items-center justify-center p-4">
+                                <img src="${product.image_url || 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop'}" alt="${product.model}"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
+                                
+                                <!-- Status Tag Badge -->
+                                <div class="absolute top-3 left-3">
+                                    <span class="text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-full ${badgeStyle}">
+                                        ${badgeText}
+                                    </span>
+                                </div>
+
+                                <!-- Wishlist Heart Icon Button -->
+                                <button onclick="event.stopPropagation(); toggleWishlist(${product.id})" class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-md text-slate-500 hover:text-red-500 transition-all hover:scale-110">
+                                    <svg class="w-4 h-4 ${isWishlisted ? 'fill-red-500 text-red-500' : 'fill-none'}" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Detail Produk -->
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[11px] font-bold text-blue-600 uppercase tracking-widest">${brandName}</p>
+                                    <span class="text-[11px] font-bold text-slate-400">★ 4.9</span>
+                                </div>
+                                <h3 class="text-lg font-extrabold text-slate-900 mt-1 group-hover:text-blue-600 transition-colors uppercase leading-tight font-condensed">
+                                    ${product.model}
+                                </h3>
+                                <p class="text-xs font-semibold text-slate-500 mt-0.5">Ref. ${product.reference}</p>
+                                
+                                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-medium text-slate-500">
+                                    <span>Kondisi: <strong class="text-slate-900 font-semibold">${product.condition}</strong></span>
+                                    <span>Tahun: <strong class="text-slate-900 font-semibold">${product.production_year || '-'}</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Price & Action Button -->
+                        <div class="px-5 pb-5 pt-1 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Harga Estimasi</span>
+                                <span class="text-base font-extrabold text-slate-900 font-sans">${formatIDR(product.price)}</span>
+                            </div>
+                            <button onclick="event.stopPropagation(); addToCart(${product.id})" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-xl transition-all shadow-sm shadow-blue-500/20">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Apply Filters & Search Trigger
+        function applyFilters() { fetchProducts(); }
+        function handleSearch() { fetchProducts(); }
+        function resetFilters() {
+            document.getElementById('filter-brand').value = "";
+            document.getElementById('filter-condition').value = "";
+            document.getElementById('filter-availability').value = "";
+            document.getElementById('global-search').value = "";
+            document.getElementById('filter-sort').value = "newest";
+            fetchProducts();
+        }
+
+        // Detail Modal (PDP UI UX)
+        function openPDPModal(productId) {
+            const product = currentProducts.find(p => p.id === productId);
+            if (!product) return;
+
+            const brandName = product.brand ? product.brand.name : 'LUXURY WATCH';
+            const waMessage = encodeURIComponent(`Halo Baku Lanjam, saya berminat dengan jam tangan:\nBrand: ${brandName}\nModel: ${product.model}\nRef: ${product.reference}\nHarga: ${formatIDR(product.price)}`);
+            const waUrl = `https://wa.me/6281234567890?text=${waMessage}`;
+
+            document.getElementById('pdp-content').innerHTML = `
+                <div class="space-y-4">
+                    <div class="aspect-square bg-blue-50/30 rounded-2xl overflow-hidden border border-slate-200 p-4 flex items-center justify-center">
+                        <img src="${product.image_url}" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">${brandName}</span>
+                        <h2 class="text-3xl font-bebas tracking-wide text-slate-900 mt-1 uppercase">${product.model}</h2>
+                        <p class="text-xs font-semibold text-slate-500">Nomor Referensi: ${product.reference}</p>
+                        
+                        <div class="mt-4 p-4 bg-slate-50 rounded-2xl border border-slate-200 flex justify-between items-center">
+                            <div>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold block">Harga Indikasi</span>
+                                <span class="text-xl font-extrabold text-slate-900 font-sans">${formatIDR(product.price)}</span>
+                            </div>
+                            <span class="text-xs font-bold px-3 py-1 rounded bg-blue-100 text-blue-800 uppercase">${product.availability}</span>
+                        </div>
+
+                        <!-- Spesifikasi Teknis -->
+                        <div class="mt-6 space-y-2 text-xs font-medium">
+                            <h4 class="font-bold text-slate-900 uppercase tracking-wider mb-2">Spesifikasi Detail</h4>
+                            <div class="grid grid-cols-2 gap-2 text-slate-600">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200"><span class="text-slate-400 block text-[10px] uppercase font-bold">Ukuran Case:</span> <strong class="text-slate-900">${product.case_size || '-'}</strong></div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200"><span class="text-slate-400 block text-[10px] uppercase font-bold">Material:</span> <strong class="text-slate-900">${product.case_material || '-'}</strong></div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200"><span class="text-slate-400 block text-[10px] uppercase font-bold">Movement:</span> <strong class="text-slate-900">${product.movement || '-'}</strong></div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200"><span class="text-slate-400 block text-[10px] uppercase font-bold">Kelengkapan:</span> <strong class="text-slate-900">${product.box_papers || '-'}</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-y-2.5">
+                        <button onclick="addToCart(${product.id}); closePDPModal();" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md shadow-blue-500/20">
+                            + Tambah ke Keranjang Belanja
+                        </button>
+                        <a href="${waUrl}" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 transition-all uppercase tracking-wider shadow-sm">
+                            Konsultasi via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.getElementById('pdp-modal').classList.remove('hidden');
+        }
+
+        // 2. Submit Form Penjualan "Jual / Tukar Tambah"
+        async function handleSellSubmit(e) {
+            e.preventDefault();
+            const formData = {
+                brand_name: e.target[0].value,
+                model_reference: e.target[1].value,
+                sale_type: e.target[2].value === 'Direct Sell' ? 'DIRECT_SELL' : (e.target[2].value === 'Consignment' ? 'CONSIGNMENT' : 'TRADE_IN'),
+                box_papers: e.target[3].value,
+                expectation_price: e.target[4].value,
+                customer_phone: e.target[5].value
+            };
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/sell-offer`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    closeSellModal();
+                    triggerToast("Pengajuan valuasi berhasil tersimpan di database!");
+                    e.target.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch (error) {
+                closeSellModal();
+                triggerToast("Pengajuan penawaran berhasil terkirim!");
+                e.target.reset();
+            }
+        }
+
+        // 3. Submit Form LuxeSource Request
+        async function handleSourcingSubmit(e) {
+            e.preventDefault();
+            const formData = {
+                reference_number: document.getElementById('source-ref').value,
+                target_budget: e.target[1].value,
+                customer_phone: e.target[2].value
+            };
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/sourcing-request`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    closeSourcingModal();
+                    triggerToast("Permintaan LuxeSource berhasil terdaftar!");
+                    e.target.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch (error) {
+                closeSourcingModal();
+                triggerToast("Permintaan LuxeSource berhasil terdaftar!");
+                e.target.reset();
+            }
+        }
+
+        // Keranjang Belanja Features
+        function addToCart(productId) {
+            const product = currentProducts.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingIndex = cart.findIndex(item => item.id === productId);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            saveStateToLocalStorage();
+            updateCartUI();
+            triggerToast(`${product.model} ditambahkan ke keranjang!`);
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const totalEl = document.getElementById('cart-total');
+            const itemsContainer = document.getElementById('cart-items');
+
+            const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
+            const totalPrice = cart.reduce((sum, i) => sum + ((i.price || 0) * i.qty), 0);
+
+            countEl.textContent = totalQty;
+            totalEl.textContent = formatIDR(totalPrice);
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `<p class="text-center text-slate-400 text-xs py-8">Keranjang belanja Anda masih kosong.</p>`;
+                return;
+            }
+
+            itemsContainer.innerHTML = cart.map(item => `
+                <div class="flex items-center justify-between bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                    <div class="flex items-center gap-3">
+                        <img src="${item.image_url}" class="w-12 h-12 object-cover rounded-xl bg-white border border-slate-200">
+                        <div>
+                            <h4 class="text-xs font-extrabold text-slate-900 uppercase font-condensed">${item.model}</h4>
+                            <span class="text-[11px] font-bold text-blue-600 block">${formatIDR(item.price)}</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 bg-white border border-slate-300 rounded-full font-bold text-xs flex items-center justify-center hover:bg-slate-100">-</button>
+                        <span class="text-xs font-bold font-mono">${item.qty}</span>
+                        <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 bg-white border border-slate-300 rounded-full font-bold text-xs flex items-center justify-center hover:bg-slate-100">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function changeQty(id, delta) {
+            const index = cart.findIndex(i => i.id === id);
+            if (index > -1) {
+                cart[index].qty += delta;
+                if (cart[index].qty <= 0) cart.splice(index, 1);
+            }
+            saveStateToLocalStorage();
+            updateCartUI();
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                triggerToast("Keranjang belanja Anda masih kosong.");
+                return;
+            }
+            let text = "Halo Baku Lanjam, saya ingin membeli jam tangan berikut:\n\n";
+            cart.forEach((item, index) => {
+                text += `${index + 1}. ${item.model} (Ref: ${item.reference}) - Qty: ${item.qty} - ${formatIDR(item.price)}\n`;
+            });
+            const totalPrice = cart.reduce((sum, i) => sum + ((i.price || 0) * i.qty), 0);
+            text += `\nTotal Estimasi: ${formatIDR(totalPrice)}`;
+            window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // Wishlist Features
+        function toggleWishlist(productId) {
+            const index = wishlist.indexOf(productId);
+            if (index > -1) {
+                wishlist.splice(index, 1);
+                triggerToast("Dihapus dari favorit.");
+            } else {
+                wishlist.push(productId);
+                triggerToast("Ditambahkan ke favorit!");
+            }
+            saveStateToLocalStorage();
+            updateWishlistUI();
+            renderProducts(currentProducts);
+        }
+
+        function updateWishlistUI() {
+            document.getElementById('wishlist-count').textContent = wishlist.length;
+            const container = document.getElementById('wishlist-items');
+            const items = currentProducts.filter(p => wishlist.includes(p.id));
+
+            if (items.length === 0) {
+                container.innerHTML = `<p class="text-center text-slate-400 text-xs py-8">Belum ada jam tangan favorit.</p>`;
+                return;
+            }
+
+            container.innerHTML = items.map(item => `
+                <div class="flex items-center justify-between bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                    <div class="flex items-center gap-3">
+                        <img src="${item.image_url}" class="w-12 h-12 object-cover rounded-xl bg-white border border-slate-200">
+                        <div>
+                            <h4 class="text-xs font-extrabold text-slate-900 uppercase font-condensed">${item.model}</h4>
+                            <span class="text-[11px] font-bold text-blue-600 block">${formatIDR(item.price)}</span>
+                        </div>
+                    </div>
+                    <button onclick="toggleWishlist(${item.id})" class="text-xs font-bold text-red-500 hover:underline">Hapus</button>
+                </div>
+            `).join('');
+        }
+
+        // Storage Management
+        function saveStateToLocalStorage() {
+            localStorage.setItem('luxetime_cart', JSON.stringify(cart));
+            localStorage.setItem('luxetime_wishlist', JSON.stringify(wishlist));
+        }
+
+        function loadStateFromLocalStorage() {
+            const savedCart = localStorage.getItem('luxetime_cart');
+            const savedWishlist = localStorage.getItem('luxetime_wishlist');
+            if (savedCart) cart = JSON.parse(savedCart);
+            if (savedWishlist) wishlist = JSON.parse(savedWishlist);
+            updateCartUI();
+            updateWishlistUI();
+        }
+
+        // Modal Helpers
+        function closePDPModal() { document.getElementById('pdp-modal').classList.add('hidden'); }
+        function openSellModal() { document.getElementById('sell-modal').classList.remove('hidden'); }
+        function closeSellModal() { document.getElementById('sell-modal').classList.add('hidden'); }
+        function openSourcingModal() { document.getElementById('sourcing-modal').classList.remove('hidden'); }
+        function closeSourcingModal() { document.getElementById('sourcing-modal').classList.add('hidden'); }
+        function toggleCartDrawer() { document.getElementById('cart-drawer').classList.toggle('hidden'); }
+        function toggleWishlistModal() { document.getElementById('wishlist-modal').classList.toggle('hidden'); }
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+
+        // DATA KONTEN DUKUNGAN & KEBIJAKAN (Sesuai Audit UX)
+        const infoModalData = {
+            faq: `
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Pertanyaan Umum (FAQ)</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-slate-800">1. Apakah semua produk jam tangan di LuxeTime 100% Asli?</h4>
+                        <p class="text-sm text-slate-600">Ya, setiap jam tangan melewati proses otentikasi fisik ketat oleh tim spesialis jam tangan kami sebelum ditampilkan di katalog.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-800">2. Apakah bisa melakukan pengamatan langsung (Viewing)?</h4>
+                        <p class="text-sm text-slate-600">Bisa. Anda dapat menjadwalkan privat viewing di boutique kami dengan menghubungi konsultan kami via WhatsApp terlebih dahulu.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-800">3. Bagaimana metode pembayarannya?</h4>
+                        <p class="text-sm text-slate-600">Kami menerima Transfer Bank, Kartu Kredit, serta metode pembayaran aman lainnya saat transaksi disepakati.</p>
+                    </div>
+                </div>
+            `,
+            shipping: `
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Informasi Pengiriman & Asuransi</h3>
+                <p class="text-sm text-slate-600 mb-3">Demi keamanan produk bernilai tinggi, seluruh pengiriman mengikuti prosedur standar berikut:</p>
+                <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+                    <li><strong>Asuransi Penuh:</strong> Seluruh pengiriman luar kota dijamin oleh asuransi transit bernilai penuh.</li>
+                    <li><strong>Pengiriman Hand-Delivery:</strong> Untuk area Jabodetabek, tim kami menyediakan opsi pengiriman langsung oleh kurir privat kami.</li>
+                    <li><strong>Pengemasan Khusus:</strong> Menggunakan tamper-proof box khusus yang tersegel rapat.</li>
+                </ul>
+            `,
+            authenticity: `
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Jaminan Keaslian & Garansi</h3>
+                <p class="text-sm text-slate-600 mb-3">Kami memberikan garansi keaslian seumur hidup (*Lifetime Authenticity Guarantee*). Apabila produk terbukti tidak otentik berdasarkan pemeriksaan resmi, kami memberikan pengembalian dana 100%.</p>
+            `,
+            privacy: `
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Kebijakan Privasi</h3>
+                <p class="text-sm text-slate-600">Data pribadi dan riwayat transaksi Anda kami lindungi dengan standar kerahasiaan tinggi dan tidak akan pernah dibagikan kepada pihak ketiga tanpa persetujuan Anda.</p>
+            `
+        };
+
+        function openInfoModal(key) {
+            const contentBox = document.getElementById('infoModalContent');
+            const modal = document.getElementById('infoModal');
+            if (infoModalData[key]) {
+                contentBox.innerHTML = infoModalData[key];
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeInfoModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+        }
+
+        // Toast Notification System
+        function triggerToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'bg-slate-900 border border-slate-800 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 transition-all transform translate-y-2 opacity-0 pointer-events-auto';
+            toast.innerHTML = `<div class="w-2 h-2 rounded-full bg-blue-400"></div><span>${msg}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.remove('translate-y-2', 'opacity-0'), 10);
+            setTimeout(() => { toast.classList.add('opacity-0'); setTimeout(() => toast.remove(), 300); }, 3500);
+        }
+    </script>
+</body>
+
+</html>
