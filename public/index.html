@@ -113,16 +113,16 @@
                 <!-- Navigation Links (Kiri) -->
                 <nav
                     class="hidden lg:flex items-center space-x-6 text-xs font-bold uppercase tracking-widest text-slate-600">
+                    <a href="#our-collection" class="hover:text-blue-600 transition-colors">Our Collection</a>
                     <a href="#katalog" class="text-blue-600 hover:text-blue-700 transition-colors">Katalog Jam</a>
                     <a href="javascript:void(0)" onclick="openSellModal()"
-                        class="hover:text-blue-600 transition-colors">Jual & Tukar Tambah</a>
+                        class="hover:text-blue-600 transition-colors">Jual & Konsinyasi</a>
                     <a href="javascript:void(0)" onclick="openSourcingModal()"
                         class="hover:text-blue-600 text-blue-600 transition-colors flex items-center gap-1.5">
                         <span>LuxeSource</span>
                         <span
                             class="bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 rounded font-mono font-bold">RARA</span>
                     </a>
-                    <a href="#keaslian" class="hover:text-blue-600 transition-colors">Keaslian</a>
                     <a href="admin.html"
                         class="bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg border border-blue-200 transition-all flex items-center gap-1 text-[11px]">
                         <span>⚙️ Seller Centre</span>
@@ -183,14 +183,27 @@
 
         <!-- Mobile Drawer Navigation -->
         <div id="mobile-menu"
-            class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 text-sm font-bold uppercase tracking-wider shadow-lg">
-            <a href="#katalog" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-blue-600 py-1">Katalog Jam</a>
+            class="hidden lg:hidden bg-white border-t border-slate-200 px-5 py-4 space-y-3 text-xs font-bold uppercase tracking-wider shadow-xl transition-all duration-300">
+            <a href="#katalog" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-slate-800 hover:text-blue-600 py-1.5 border-b border-slate-100">
+                <span>⌚ Katalog Jam</span>
+            </a>
             <a href="javascript:void(0)" onclick="toggleMobileMenu(); openSellModal();"
-                class="block text-slate-700 hover:text-blue-600 py-1">Jual & Tukar Tambah</a>
+                class="flex items-center gap-2 text-slate-800 hover:text-blue-600 py-1.5 border-b border-slate-100">
+                <span>💰 Jual & Tukar Tambah</span>
+            </a>
             <a href="javascript:void(0)" onclick="toggleMobileMenu(); openSourcingModal();"
-                class="block text-blue-600 py-1">LuxeSource (Request Model)</a>
+                class="flex items-center justify-between text-blue-600 py-1.5 border-b border-slate-100">
+                <span class="flex items-center gap-2">🔍 LuxeSource (Request Jam)</span>
+                <span class="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded font-mono font-bold">RARA</span>
+            </a>
             <a href="#keaslian" onclick="toggleMobileMenu()"
-                class="block text-slate-700 hover:text-blue-600 py-1">Keaslian & Garansi</a>
+                class="flex items-center gap-2 text-slate-800 hover:text-blue-600 py-1.5 border-b border-slate-100">
+                <span>🛡️ Keaslian & Garansi</span>
+            </a>
+            <a href="admin.html"
+                class="flex items-center gap-2 bg-blue-50 text-blue-700 py-2.5 px-3 rounded-xl border border-blue-200 mt-2 font-bold">
+                <span>⚙️ Seller Centre Admin</span>
+            </a>
         </div>
     </header>
 
@@ -224,6 +237,89 @@
                 <button onclick="openSellModal()" class="inline-flex items-center justify-center bg-blue-600/90 hover:bg-blue-600 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-blue-500/30 hover:scale-105 border border-blue-400/40">
                     Jual Jam Tangan
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.5. OUR COLLECTION (Clean Luxury Watch Photos Showcase) -->
+    <section id="our-collection" class="bg-white border-b border-slate-200/80 py-10 sm:py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200/80 inline-block mb-1.5">
+                        Brand Showcase
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-sans font-extrabold uppercase tracking-tight text-slate-900 leading-none">
+                        OUR COLLECTION
+                    </h2>
+                </div>
+                <a href="#katalog" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-600 hover:text-blue-700 hover:underline">
+                    <span>Lihat Katalog</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+
+            <!-- Clean Product Watch Photo Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                <!-- Rolex -->
+                <div onclick="selectCollectionBrand('Rolex')" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-50 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 text-center">
+                    <div class="aspect-square relative overflow-hidden rounded-xl bg-white p-2 border border-slate-100 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0682/2009/2547/files/rolex-gmt-master-ii-sprite-126720vtnr-oyster-2026-_1.jpg?v=1774347716" alt="Rolex Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="pt-2 pb-1">
+                        <h3 class="text-xs sm:text-sm font-extrabold uppercase font-condensed tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">ROLEX</h3>
+                    </div>
+                </div>
+
+                <!-- Patek Philippe -->
+                <div onclick="selectCollectionBrand('Patek Philippe')" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-50 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 text-center">
+                    <div class="aspect-square relative overflow-hidden rounded-xl bg-white p-2 border border-slate-100 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0682/2009/2547/files/rolex-1908-platinum-ice-blue-indonesia-_1.jpg?v=1774517590" alt="Patek Philippe Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="pt-2 pb-1">
+                        <h3 class="text-xs sm:text-sm font-extrabold uppercase font-condensed tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">PATEK PHILIPPE</h3>
+                    </div>
+                </div>
+
+                <!-- Audemars Piguet -->
+                <div onclick="selectCollectionBrand('Audemars Piguet')" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-50 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 text-center">
+                    <div class="aspect-square relative overflow-hidden rounded-xl bg-white p-2 border border-slate-100 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0682/2009/2547/files/ap-royal-pop-lan-ba-_1_705e9993-9c67-4e29-a5ba-0065d2f41254.jpg?v=1787803106" alt="Audemars Piguet Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="pt-2 pb-1">
+                        <h3 class="text-xs sm:text-sm font-extrabold uppercase font-condensed tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">AUDEMARS PIGUET</h3>
+                    </div>
+                </div>
+
+                <!-- Richard Mille -->
+                <div onclick="selectCollectionBrand('Richard Mille')" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-50 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 text-center">
+                    <div class="aspect-square relative overflow-hidden rounded-xl bg-white p-2 border border-slate-100 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0682/2009/2547/files/bell-ross-br-05-chrono-green-_1.jpg?v=1788495019" alt="Richard Mille Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="pt-2 pb-1">
+                        <h3 class="text-xs sm:text-sm font-extrabold uppercase font-condensed tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">RICHARD MILLE</h3>
+                    </div>
+                </div>
+
+                <!-- Tudor -->
+                <div onclick="selectCollectionBrand('Tudor')" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-50 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 text-center">
+                    <div class="aspect-square relative overflow-hidden rounded-xl bg-white p-2 border border-slate-100 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0682/2009/2547/files/tudor-pelagos-fxd-alinghi-red-bull-racing-25707kn-0001-_1.jpg?v=1774347716" alt="Tudor Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="pt-2 pb-1">
+                        <h3 class="text-xs sm:text-sm font-extrabold uppercase font-condensed tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">TUDOR</h3>
+                    </div>
+                </div>
+
+                <!-- A. Lange & Söhne -->
+                <div onclick="selectCollectionBrand('A. Lange & Söhne')" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-50 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 text-center">
+                    <div class="aspect-square relative overflow-hidden rounded-xl bg-white p-2 border border-slate-100 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0682/2009/2547/files/a-lange-sohne-1815-chrono-black-_1.jpg?v=1771402120" alt="A. Lange & Söhne Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="pt-2 pb-1">
+                        <h3 class="text-xs sm:text-sm font-extrabold uppercase font-condensed tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">A. LANGE & SÖHNE</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -263,6 +359,8 @@
                     <option value="Patek Philippe">merek : Patek Philippe</option>
                     <option value="Audemars Piguet">merek : Audemars Piguet</option>
                     <option value="Richard Mille">merek : Richard Mille</option>
+                    <option value="Tudor">merek : Tudor</option>
+                    <option value="A. Lange & Söhne">merek : A. Lange & Söhne</option>
                 </select>
                 <div class="pointer-events-none absolute right-3 top-2.5 text-slate-400 text-[10px]">▼</div>
             </div>
@@ -307,9 +405,137 @@
     </section>
 
     <!-- 4. Product Catalog Grid -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6">
+        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             <!-- Dynamic Watch Product Cards Rendered via JS -->
+        </div>
+    </section>
+
+    <!-- 4.5. ULTRA-CLEAN CUSTOMER FEEDBACK STREAM (No grid box, Auto-scrolling horizontally) -->
+    <section id="reviews" class="bg-white border-t border-[#E2E2E2] py-8 sm:py-12 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Clean Star Rating Badge Only (No Extra Header Text) -->
+            <div class="flex items-center gap-2 mb-4 pb-2">
+                <div class="flex text-[#9a7b40] text-sm font-bold gap-0.5">★★★★★</div>
+                <span class="text-xs font-bold text-[#141518] font-sans">4.9 / 5.0 Rating</span>
+            </div>
+
+            <!-- Auto-scrolling Horizontal Feedback Stream (Frameless & Gridless) -->
+            <div id="testimonial-slider" class="flex gap-6 overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap scroll-smooth">
+                
+                <!-- Feedback Item 1 -->
+                <div class="shrink-0 w-[290px] sm:w-[340px] px-2 flex flex-col justify-between border-r border-slate-200/50 last:border-r-0">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex text-[#9a7b40] text-xs gap-0.5">★★★★★</div>
+                            <span class="text-[10px] font-bold text-[#9a7b40] uppercase tracking-wider">Verified Buyer</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed font-medium whitespace-normal">
+                            "Pelayanan sangat profesional dan privat. Inspeksi fisik jam sangat detail & transparan. Unit Rolex GMT Sprite saya terima dalam kondisi 100% unworn full set."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-2 flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-full bg-[#141518] text-white font-bold text-[11px] flex items-center justify-center border border-[#9a7b40]/40">
+                            HS
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#141518] uppercase tracking-wide">Bpk. Hendra S.</h4>
+                            <span class="text-[10px] text-slate-400 font-medium block">Rolex GMT-Master II Sprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Item 2 -->
+                <div class="shrink-0 w-[290px] sm:w-[340px] px-2 flex flex-col justify-between border-r border-slate-200/50 last:border-r-0">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex text-[#9a7b40] text-xs gap-0.5">★★★★★</div>
+                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">LuxeSource</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed font-medium whitespace-normal">
+                            "Sudah cari Patek Philippe Ice Blue kemana-mana sangat susah. Pakai fitur LuxeSource di Baku Lanjam, cuma butuh 5 hari tim mereka berhasil menemukan unitnya."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-2 flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-full bg-[#9a7b40] text-white font-bold text-[11px] flex items-center justify-center">
+                            RT
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#141518] uppercase tracking-wide">Dr. Raymond Tan</h4>
+                            <span class="text-[10px] text-slate-400 font-medium block">Rolex 1908 Platinum Ice Blue</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Item 3 -->
+                <div class="shrink-0 w-[290px] sm:w-[340px] px-2 flex flex-col justify-between border-r border-slate-200/50 last:border-r-0">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex text-[#9a7b40] text-xs gap-0.5">★★★★★</div>
+                            <span class="text-[10px] font-bold text-[#9a7b40] uppercase tracking-wider">Verified Consignor</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed font-medium whitespace-normal">
+                            "Pengalaman konsinyasi jam tangan terbaik. Valuasi jujur, kontrak transparan, dan dana hasil penjualan langsung ditransfer detik itu juga."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-2 flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-full bg-[#141518] text-white font-bold text-[11px] flex items-center justify-center border border-[#9a7b40]/40">
+                            JV
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#141518] uppercase tracking-wide">Ibu Jessica V.</h4>
+                            <span class="text-[10px] text-slate-400 font-medium block">Audemars Piguet Royal Oak</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Item 4 -->
+                <div class="shrink-0 w-[290px] sm:w-[340px] px-2 flex flex-col justify-between border-r border-slate-200/50 last:border-r-0">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex text-[#9a7b40] text-xs gap-0.5">★★★★★</div>
+                            <span class="text-[10px] font-bold text-[#9a7b40] uppercase tracking-wider">Verified Buyer</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed font-medium whitespace-normal">
+                            "Tudor Pelagos FXD Alinghi Red Bull pesanan saya sampai dengan aman di Medan. Packing tamper-proof sangat tebal dan aman, garansi resmi aktif."
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-2 flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-full bg-slate-800 text-white font-bold text-[11px] flex items-center justify-center">
+                            KW
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#141518] uppercase tracking-wide">Kevin W.</h4>
+                            <span class="text-[10px] text-slate-400 font-medium block">Tudor Pelagos FXD Alinghi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Item 5 -->
+                <div class="shrink-0 w-[290px] sm:w-[340px] px-2 flex flex-col justify-between border-r border-slate-200/50 last:border-r-0">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex text-[#9a7b40] text-xs gap-0.5">★★★★★</div>
+                            <span class="text-[10px] font-bold text-purple-600 uppercase tracking-wider">Private Trade-In</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed font-medium whitespace-normal">
+                            "Tukar tambah jam Rolex lama ke Daytona Black Dial berjalan sangat mulus. Tim appraisal menghargai jam saya dengan pantas. Layanan boutique mewah!"
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-2 flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-full bg-[#9a7b40] text-white font-bold text-[11px] flex items-center justify-center">
+                            AP
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#141518] uppercase tracking-wide">Agus P.</h4>
+                            <span class="text-[10px] text-slate-400 font-medium block">Rolex Daytona Black Dial</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
@@ -604,11 +830,9 @@
 
     <!-- JavaScript Application Engine -->
     <script>
-        const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && window.location.port === '8000'
-            ? 'http://localhost:8000/api'
-            : (window.location.port === '' || window.location.port === '80' || window.location.port === '443')
-                ? `${window.location.origin}/api`
-                : 'http://localhost:8000/api';
+        const API_BASE_URL = window.location.port === '8000' || window.location.port === '80' || window.location.port === '443' || window.location.port === ''
+            ? `${window.location.origin}/api`
+            : `${window.location.protocol}//${window.location.hostname}:8000/api`;
         let currentProducts = [];
         let cart = [];
         let wishlist = [];
@@ -617,70 +841,70 @@
         const fallbackProducts = [
             {
                 id: 1,
-                model: "Submariner Date 'Kermit'",
-                reference: "126610LV",
-                sku: "RLX-126610LV-2024",
-                condition: "Unworn / New",
-                production_year: 2024,
-                case_size: "41 mm",
+                model: "GMT MASTER-II SPRITE OYSTER (2026)",
+                reference: "126720VTNR",
+                sku: "V4D76954",
+                condition: "Never Been Worn",
+                production_year: 2026,
+                case_size: "40 mm",
                 case_material: "Oystersteel",
-                movement: "Automatic Caliber 3235",
+                movement: "Automatic Caliber 3285",
                 box_papers: "Full Set (Box & Card)",
-                price: 235000000,
+                price: 315000000,
                 currency: "IDR",
                 availability: "AVAILABLE",
-                image_url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop",
+                image_url: "https://cdn.shopify.com/s/files/1/0682/2009/2547/files/rolex-sprite-indonesia-_2_3a4e5004-aba5-4c4d-be95-2841b1e32f45.jpg?v=1788519463",
                 brand: { id: 1, name: "Rolex", slug: "rolex" }
             },
             {
                 id: 2,
-                model: "Nautilus Blue Dial",
-                reference: "5711/1A-010",
-                sku: "PP-5711-1A",
-                condition: "Mint / Like New",
+                model: "AQUANAUT 5167A-001 (2021)",
+                reference: "5167A-001",
+                sku: "7357631",
+                condition: "New Old Stock",
                 production_year: 2021,
                 case_size: "40 mm",
                 case_material: "Stainless Steel",
-                movement: "Automatic Caliber 26-330 S C",
+                movement: "Automatic Calibre 324 SC",
                 box_papers: "Full Set",
-                price: 1450000000,
+                price: 1498000000,
                 currency: "IDR",
-                availability: "SOURCED",
-                image_url: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop",
+                availability: "AVAILABLE",
+                image_url: "https://cdn.shopify.com/s/files/1/0682/2009/2547/files/PATEKPHILIPPEAQUANAUT-1.jpg?v=1788514897",
                 brand: { id: 2, name: "Patek Philippe", slug: "patek-philippe" }
             },
             {
                 id: 3,
-                model: "Royal Oak Chronograph",
-                reference: "26331ST.OO.1220ST.01",
-                sku: "AP-26331ST-2022",
-                condition: "Mint / Excellent",
-                production_year: 2022,
-                case_size: "41 mm",
+                model: "ROYAL POP LAN BA (2026)",
+                reference: "SSX03L100N",
+                sku: "AP-SSX03L-2026",
+                condition: "Never Been Worn",
+                production_year: 2026,
+                case_size: "40 mm",
                 case_material: "Stainless Steel",
-                movement: "Automatic Caliber 2385",
+                movement: "Manual Winding Cal. SISTEM51",
                 box_papers: "Full Set",
-                price: 680000000,
+                price: 23000000,
                 currency: "IDR",
-                availability: "RESERVED",
-                image_url: "https://images.unsplash.com/photo-1508656966624-913217036495?q=80&w=800&auto=format&fit=crop",
+                availability: "AVAILABLE",
+                image_url: "https://cdn.shopify.com/s/files/1/0682/2009/2547/files/ap-royal-pop-lan-ba-_1_705e9993-9c67-4e29-a5ba-0065d2f41254.jpg?v=1787803106",
                 brand: { id: 3, name: "Audemars Piguet", slug: "audemars-piguet" }
             },
             {
                 id: 4,
-                model: "RM 011 Felipe Massa",
-                reference: "RM011-FM",
-                sku: "RM-011FM-2019",
-                condition: "Very Good",
-                production_year: 2019,
-                case_size: "50 x 40 mm",
+                model: "BR-05 CHRONO GREEN DIAL (2025)",
+                reference: "BR05C-GN-ST/SST",
+                sku: "RM-12104248",
+                condition: "Very Mint",
+                production_year: 2025,
+                case_size: "42 mm",
                 case_material: "Titanium",
-                movement: "Automatic Skeletonized",
+                movement: "Automatic Caliber BR-CAL.326",
                 box_papers: "Watch & Papers Only",
-                price: null,
+                price: 69800000,
                 currency: "IDR",
                 availability: "AVAILABLE",
-                image_url: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=800&auto=format&fit=crop",
+                image_url: "https://cdn.shopify.com/s/files/1/0682/2009/2547/files/bell-ross-br-05-chrono-green-_1.jpg?v=1788495019",
                 brand: { id: 4, name: "Richard Mille", slug: "richard-mille" }
             }
         ];
@@ -771,7 +995,7 @@
                         <div>
                             <!-- Frame Gambar & Badge -->
                             <div class="aspect-[4/5] bg-blue-50/30 relative overflow-hidden flex items-center justify-center p-4">
-                                <img src="${product.image_url || 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop'}" alt="${product.model}"
+                                <img src="${product.image_url || 'https://cdn.shopify.com/s/files/1/0682/2009/2547/files/rolex-sprite-indonesia-_2_3a4e5004-aba5-4c4d-be95-2841b1e32f45.jpg?v=1788519463'}" alt="${product.model}"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
                                 
                                 <!-- Status Tag Badge -->
@@ -825,6 +1049,17 @@
         // Apply Filters & Search Trigger
         function applyFilters() { fetchProducts(); }
         function handleSearch() { fetchProducts(); }
+        function selectCollectionBrand(brandName) {
+            const filterBrand = document.getElementById('filter-brand');
+            if (filterBrand) {
+                filterBrand.value = brandName;
+                applyFilters();
+            }
+            const catalogEl = document.getElementById('katalog');
+            if (catalogEl) {
+                catalogEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
         function resetFilters() {
             document.getElementById('filter-brand').value = "";
             document.getElementById('filter-condition').value = "";
@@ -1151,6 +1386,30 @@
             setTimeout(() => toast.classList.remove('translate-y-2', 'opacity-0'), 10);
             setTimeout(() => { toast.classList.add('opacity-0'); setTimeout(() => toast.remove(), 300); }, 3500);
         }
+
+        // Automatic Horizontal Auto-Scroll for Customer Feedback Stream
+        (function initAutoScrollFeedback() {
+            const slider = document.getElementById('testimonial-slider');
+            if (!slider) return;
+            let isHovered = false;
+
+            slider.addEventListener('mouseenter', () => isHovered = true);
+            slider.addEventListener('mouseleave', () => isHovered = false);
+            slider.addEventListener('touchstart', () => isHovered = true, { passive: true });
+            slider.addEventListener('touchend', () => isHovered = false, { passive: true });
+
+            function autoScrollStep() {
+                if (!isHovered) {
+                    slider.scrollLeft += 0.8;
+                    // When reaching near the end of scrollable width, reset to start seamlessly
+                    if (slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth - 4)) {
+                        slider.scrollLeft = 0;
+                    }
+                }
+                requestAnimationFrame(autoScrollStep);
+            }
+            requestAnimationFrame(autoScrollStep);
+        })();
     </script>
 </body>
 
