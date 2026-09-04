@@ -282,53 +282,38 @@
                 <p class="text-xs sm:text-sm text-slate-500 mt-2.5 font-medium">Jelajahi koleksi jam tangan mewah autentik pilihan berdasarkan kategori favorit Anda.</p>
             </div>
 
-            <!-- 3 Category Cards Grid -->
+            <!-- 3 Category Cards Grid (Minimal & Clean Theme) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Card 1: MEN -->
-                <div onclick="filterCollectionCategory('Men')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
-                    <img src="collection-men.jpg" alt="Men Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
-                        <span class="text-blue-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Koleksi Pria</span>
-                        <h3 class="text-3xl sm:text-4xl font-sans font-extrabold text-white uppercase tracking-tight drop-shadow-md group-hover:text-blue-300 transition-colors">
+                <div onclick="filterCollectionCategory('Men')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
+                    <img src="collection-men.jpg" alt="Men" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-6 text-center">
+                        <span class="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-white/90 group-hover:text-white transition-colors">
                             MEN
-                        </h3>
-                        <div class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider group-hover:translate-x-1 transition-transform">
-                            <span>Lihat Jam Pria</span>
-                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </div>
+                        </span>
                     </div>
                 </div>
 
                 <!-- Card 2: WOMEN -->
-                <div onclick="filterCollectionCategory('Women')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
-                    <img src="collection-women.png" alt="Women Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
-                        <span class="text-blue-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Koleksi Wanita</span>
-                        <h3 class="text-3xl sm:text-4xl font-sans font-extrabold text-white uppercase tracking-tight drop-shadow-md group-hover:text-blue-300 transition-colors">
+                <div onclick="filterCollectionCategory('Women')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
+                    <img src="collection-women.png" alt="Women" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-6 text-center">
+                        <span class="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-white/90 group-hover:text-white transition-colors">
                             WOMEN
-                        </h3>
-                        <div class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider group-hover:translate-x-1 transition-transform">
-                            <span>Lihat Jam Wanita</span>
-                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </div>
+                        </span>
                     </div>
                 </div>
 
                 <!-- Card 3: PRE OWNED -->
-                <div onclick="filterCollectionCategory('PreOwned')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
-                    <img src="collection-preowned.jpg" alt="Pre Owned Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
-                        <span class="text-blue-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Pre-Owned Authenticated</span>
-                        <h3 class="text-3xl sm:text-4xl font-sans font-extrabold text-white uppercase tracking-tight drop-shadow-md group-hover:text-blue-300 transition-colors">
+                <div onclick="filterCollectionCategory('PreOwned')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
+                    <img src="collection-preowned.jpg" alt="Pre Owned" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-6 text-center">
+                        <span class="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-white/90 group-hover:text-white transition-colors">
                             PRE OWNED
-                        </h3>
-                        <div class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider group-hover:translate-x-1 transition-transform">
-                            <span>Lihat Jam Pre-Owned</span>
-                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </div>
