@@ -268,6 +268,73 @@
         </div>
     </section>
 
+    <!-- 2.3. OUR COLLECTION SECTION (Placed Above Good Deals) -->
+    <section id="our-collection" class="w-full bg-white py-12 sm:py-16 border-b border-slate-200/80 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <span class="bg-blue-50 text-blue-700 border border-blue-200 text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-3">
+                    EXPLORE CATEGORIES
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-sans font-extrabold uppercase tracking-tight text-slate-900 leading-none">
+                    OUR COLLECTION
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-2.5 font-medium">Jelajahi koleksi jam tangan mewah autentik pilihan berdasarkan kategori favorit Anda.</p>
+            </div>
+
+            <!-- 3 Category Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Card 1: MEN -->
+                <div onclick="filterCollectionCategory('Men')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
+                    <img src="collection-men.jpg" alt="Men Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
+                        <span class="text-blue-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Koleksi Pria</span>
+                        <h3 class="text-3xl sm:text-4xl font-sans font-extrabold text-white uppercase tracking-tight drop-shadow-md group-hover:text-blue-300 transition-colors">
+                            MEN
+                        </h3>
+                        <div class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                            <span>Lihat Jam Pria</span>
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: WOMEN -->
+                <div onclick="filterCollectionCategory('Women')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
+                    <img src="collection-women.png" alt="Women Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
+                        <span class="text-blue-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Koleksi Wanita</span>
+                        <h3 class="text-3xl sm:text-4xl font-sans font-extrabold text-white uppercase tracking-tight drop-shadow-md group-hover:text-blue-300 transition-colors">
+                            WOMEN
+                        </h3>
+                        <div class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                            <span>Lihat Jam Wanita</span>
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: PRE OWNED -->
+                <div onclick="filterCollectionCategory('PreOwned')" class="group relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-200/80 bg-slate-900">
+                    <img src="collection-preowned.jpg" alt="Pre Owned Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
+                        <span class="text-blue-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">Pre-Owned Authenticated</span>
+                        <h3 class="text-3xl sm:text-4xl font-sans font-extrabold text-white uppercase tracking-tight drop-shadow-md group-hover:text-blue-300 transition-colors">
+                            PRE OWNED
+                        </h3>
+                        <div class="mt-3 inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                            <span>Lihat Jam Pre-Owned</span>
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 2.5. GOOD DEALS / FLASH SALE SECTION (Soft Blue & White Theme) -->
     <section id="good-deals" class="w-full bg-slate-50/90 text-slate-900 py-10 sm:py-12 border-b border-slate-200/80 relative overflow-hidden">
         <!-- Soft Background Ambient Accents -->
@@ -1479,11 +1546,41 @@
             renderProducts(currentProducts);
         }
 
+        function filterCollectionCategory(type) {
+            const catalogSection = document.getElementById('katalog');
+            const searchInput = document.getElementById('global-search');
+            
+            if (type === 'Men') {
+                if (searchInput) searchInput.value = 'Men';
+            } else if (type === 'Women') {
+                if (searchInput) searchInput.value = 'Women';
+            } else if (type === 'PreOwned') {
+                if (searchInput) searchInput.value = 'Pre-Owned';
+            }
+            
+            if (catalogSection) {
+                catalogSection.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            fetchProducts();
+        }
+
         function filterLocalProducts(items, search, brand, condition, availability) {
             const list = Array.isArray(items) && items.length > 0 ? items : fallbackProducts;
             return list.filter(p => {
-                const s = (search || '').toLowerCase();
-                const matchSearch = !s || p.model.toLowerCase().includes(s) || p.reference.toLowerCase().includes(s) || (p.brand && p.brand.name.toLowerCase().includes(s));
+                const s = (search || '').trim().toLowerCase();
+                let matchSearch = !s;
+                if (s) {
+                    if (s === 'men') {
+                        matchSearch = !p.model.toLowerCase().includes('pink') && !p.model.toLowerCase().includes('ladies') && !p.model.toLowerCase().includes('31mm') && !p.model.toLowerCase().includes('28mm');
+                    } else if (s === 'women') {
+                        matchSearch = p.model.toLowerCase().includes('pink') || p.model.toLowerCase().includes('ladies') || p.model.toLowerCase().includes('31mm') || p.model.toLowerCase().includes('28mm') || p.model.toLowerCase().includes('women');
+                    } else if (s === 'pre-owned' || s === 'preowned') {
+                        matchSearch = true; // All items are pre-owned luxury timepieces
+                    } else {
+                        matchSearch = p.model.toLowerCase().includes(s) || p.reference.toLowerCase().includes(s) || (p.brand && p.brand.name.toLowerCase().includes(s)) || p.condition.toLowerCase().includes(s);
+                    }
+                }
                 const matchBrand = !brand || (p.brand && p.brand.name.toLowerCase() === brand.toLowerCase());
                 const matchCondition = !condition || p.condition.toLowerCase().includes(condition.toLowerCase());
                 const matchAvailability = !availability || p.availability === availability;
