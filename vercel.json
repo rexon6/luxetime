@@ -5,6 +5,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/api/watches",
+      "destination": "/api/watches.json"
+    },
+    {
       "source": "/admin",
       "destination": "/admin.html"
     },
