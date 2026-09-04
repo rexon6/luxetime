@@ -106,12 +106,24 @@
         <span class="hidden sm:inline-block font-extrabold text-xs uppercase tracking-wider pr-1">Chat WhatsApp</span>
     </a>
 
-    <!-- TOP ANNOUNCEMENT BAR (Soft Blue Palette) -->
-    <div class="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 hover:from-blue-800 hover:to-sky-700 text-white text-xs font-semibold py-2.5 px-4 text-center transition-all cursor-pointer border-b border-blue-500/40 shadow-sm" onclick="openSellModal()">
-        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 text-center">
-            <span class="text-blue-200 text-sm font-bold shrink-0">&lsaquo;</span>
-            <span class="tracking-wide break-words">Ingin Jual atau Konsinyasi Jam Tangan Anda? Dapatkan Penawaran Instan</span>
-            <span class="text-blue-200 text-sm font-bold shrink-0">&rsaquo;</span>
+    <!-- TOP AUTO-SLIDING ANNOUNCEMENT TICKER (Auto-slide 3 Teks Jam Tangan) -->
+    <div class="bg-slate-900 text-white text-xs font-medium py-2.5 px-4 border-b border-slate-800 relative z-50 select-none overflow-hidden">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+            <button onclick="prevTopTicker()" class="text-slate-400 hover:text-white p-1 transition-colors text-sm font-bold shrink-0" aria-label="Previous">&lsaquo;</button>
+
+            <div class="flex-1 overflow-hidden relative h-5 text-center flex items-center justify-center cursor-pointer" onclick="openSellModal()">
+                <div id="top-ticker-slide-0" class="top-ticker-item transition-all duration-500 transform translate-y-0 opacity-100 uppercase tracking-widest text-[10px] sm:text-xs text-slate-200">
+                    100% Authentic & Original Luxury Timepieces Guaranteed
+                </div>
+                <div id="top-ticker-slide-1" class="top-ticker-item transition-all duration-500 transform translate-y-8 opacity-0 absolute uppercase tracking-widest text-[10px] sm:text-xs text-slate-200">
+                    Layanan Konsinyasi & Buyback Transparan Dengan Valuasi Resmi
+                </div>
+                <div id="top-ticker-slide-2" class="top-ticker-item transition-all duration-500 transform translate-y-8 opacity-0 absolute uppercase tracking-widest text-[10px] sm:text-xs text-slate-200">
+                    Gratis Pengiriman & Asuransi Ke Seluruh Wilayah Indonesia
+                </div>
+            </div>
+
+            <button onclick="nextTopTicker()" class="text-slate-400 hover:text-white p-1 transition-colors text-sm font-bold shrink-0" aria-label="Next">&rsaquo;</button>
         </div>
     </div>
 
@@ -1318,7 +1330,43 @@
             renderGoodDeals(dealsToRender);
             initPromoCountdown();
             loadStateFromLocalStorage();
+            initTopTickerAutoSlide();
         });
+
+        // Top Ticker Auto-Slide Carousel Logic
+        let currentTopTickerIndex = 0;
+        const totalTopTickerSlides = 3;
+
+        function showTopTickerSlide(index) {
+            for (let i = 0; i < totalTopTickerSlides; i++) {
+                const slide = document.getElementById(`top-ticker-slide-${i}`);
+                if (!slide) continue;
+                if (i === index) {
+                    slide.classList.remove('translate-y-8', 'opacity-0', 'absolute');
+                    slide.classList.add('translate-y-0', 'opacity-100', 'relative');
+                } else {
+                    slide.classList.remove('translate-y-0', 'opacity-100', 'relative');
+                    slide.classList.add('translate-y-8', 'opacity-0', 'absolute');
+                }
+            }
+            currentTopTickerIndex = index;
+        }
+
+        function nextTopTicker() {
+            const nextIndex = (currentTopTickerIndex + 1) % totalTopTickerSlides;
+            showTopTickerSlide(nextIndex);
+        }
+
+        function prevTopTicker() {
+            const prevIndex = (currentTopTickerIndex - 1 + totalTopTickerSlides) % totalTopTickerSlides;
+            showTopTickerSlide(prevIndex);
+        }
+
+        function initTopTickerAutoSlide() {
+            setInterval(() => {
+                nextTopTicker();
+            }, 3500);
+        }
 
         // Dataset Special Good Deals / Flash Sale Promo (Extracted from preownedwatch-id.com)
         const fallbackGoodDeals = [
