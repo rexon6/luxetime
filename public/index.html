@@ -121,7 +121,9 @@
         <div class="hidden lg:flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center h-20">
             <!-- Navigation Links (Kiri) -->
             <nav class="flex items-center space-x-6 text-xs font-bold uppercase tracking-widest text-slate-600">
-                <a href="#our-collection" class="hover:text-blue-600 transition-colors">Our Collection</a>
+                <a href="#good-deals" class="text-rose-600 hover:text-rose-700 transition-colors flex items-center gap-1 font-extrabold">
+                    <span class="animate-pulse">🔥</span> GOOD DEALS
+                </a>
                 <a href="#katalog" class="text-blue-600 hover:text-blue-700 transition-colors">Katalog Jam</a>
                 <a href="javascript:void(0)" onclick="openSellModal()" class="hover:text-blue-600 transition-colors">Jual & Konsinyasi</a>
                 <a href="javascript:void(0)" onclick="openSourcingModal()" class="hover:text-blue-600 text-blue-600 transition-colors flex items-center gap-1.5">
@@ -204,8 +206,8 @@
                 <button onclick="toggleMobileMenu()" class="min-h-[44px] min-w-[44px] text-slate-400 hover:text-slate-700 flex items-center justify-center rounded-xl hover:bg-slate-100 text-xl font-bold" aria-label="Tutup menu">&times;</button>
             </div>
             <nav class="space-y-3 text-xs font-bold uppercase tracking-wider">
-                <a href="#our-collection" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-slate-800 hover:text-blue-600 py-2.5 border-b border-slate-100">
-                    <span>Our Collection</span>
+                <a href="#good-deals" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-rose-600 hover:text-rose-700 py-2.5 border-b border-slate-100 font-extrabold">
+                    <span>🔥 Good Deals & Flash Sale</span>
                 </a>
                 <a href="#katalog" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-slate-800 hover:text-blue-600 py-2.5 border-b border-slate-100">
                     <span>Katalog Jam</span>
@@ -256,12 +258,68 @@
 
             <!-- Action Buttons: Full-width on mobile (flex-col), side-by-side on sm (flex-row) with min-h-11 (44px) -->
             <div class="mt-8 sm:mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center w-full max-w-md mx-auto">
-                <a href="#katalog" class="min-h-11 min-h-[44px] w-full sm:w-auto px-6 py-3.5 inline-flex items-center justify-center border border-white/80 hover:border-white text-white hover:bg-white hover:text-slate-950 font-bold rounded-full text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 backdrop-blur-xs shadow-xl hover:scale-105">
-                    SHOP NOW
+                <a href="#good-deals" class="min-h-11 min-h-[44px] w-full sm:w-auto px-6 py-3.5 inline-flex items-center justify-center bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-full text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 shadow-xl shadow-rose-600/30 hover:scale-105 border border-rose-400/40">
+                    🔥 LIHAT GOOD DEALS
                 </a>
-                <button onclick="openSellModal()" class="min-h-11 min-h-[44px] w-full sm:w-auto px-6 py-3.5 inline-flex items-center justify-center bg-blue-600/90 hover:bg-blue-600 text-white font-bold rounded-full text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-blue-500/30 hover:scale-105 border border-blue-400/40">
-                    JUAL JAM TANGAN
-                </button>
+                <a href="#katalog" class="min-h-11 min-h-[44px] w-full sm:w-auto px-6 py-3.5 inline-flex items-center justify-center border border-white/80 hover:border-white text-white hover:bg-white hover:text-slate-950 font-bold rounded-full text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 backdrop-blur-xs shadow-xl hover:scale-105">
+                    SHOP ALL CATALOG
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.5. GOOD DEALS / FLASH SALE SECTION (Inspired by preownedwatch-id.com) -->
+    <section id="good-deals" class="w-full bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white py-12 border-b border-slate-800 relative overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-rose-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 min-w-0">
+            <!-- Header Section with Title, Flash Sale Badge, and Live Countdown Timer -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-800 pb-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-gradient-to-r from-rose-600 to-amber-500 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg shadow-rose-500/30 flex items-center gap-1.5 animate-pulse">
+                            <span>⚡</span> FLASH SALE & GOOD DEALS
+                        </span>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider hidden sm:inline-block">Pilihan Terbaik PreOwnedWatch</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-sans font-extrabold uppercase tracking-tight text-white leading-none">
+                        SPECIAL GOOD DEALS
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-2 font-medium">Penawaran terbatas jam tangan mewah autentik dengan potongan harga eksklusif.</p>
+                </div>
+
+                <!-- Live Countdown Timer Component -->
+                <div class="bg-slate-800/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-3 sm:p-4 shrink-0 flex items-center gap-3 shadow-xl">
+                    <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 block leading-tight">Berakhir<br>Dalam:</span>
+                    <div class="flex items-center gap-1.5 font-mono text-center">
+                        <div class="bg-slate-900 border border-slate-700 px-2.5 py-1.5 rounded-xl min-w-[42px]">
+                            <span id="promo-timer-days" class="text-base sm:text-lg font-extrabold text-amber-400 block">02</span>
+                            <span class="text-[8px] uppercase font-sans text-slate-400 block font-bold">HARI</span>
+                        </div>
+                        <span class="text-rose-500 font-bold text-lg">:</span>
+                        <div class="bg-slate-900 border border-slate-700 px-2.5 py-1.5 rounded-xl min-w-[42px]">
+                            <span id="promo-timer-hours" class="text-base sm:text-lg font-extrabold text-amber-400 block">14</span>
+                            <span class="text-[8px] uppercase font-sans text-slate-400 block font-bold">JAM</span>
+                        </div>
+                        <span class="text-rose-500 font-bold text-lg">:</span>
+                        <div class="bg-slate-900 border border-slate-700 px-2.5 py-1.5 rounded-xl min-w-[42px]">
+                            <span id="promo-timer-mins" class="text-base sm:text-lg font-extrabold text-amber-400 block">35</span>
+                            <span class="text-[8px] uppercase font-sans text-slate-400 block font-bold">MNTS</span>
+                        </div>
+                        <span class="text-rose-500 font-bold text-lg">:</span>
+                        <div class="bg-slate-900 border border-slate-700 px-2.5 py-1.5 rounded-xl min-w-[42px]">
+                            <span id="promo-timer-secs" class="text-base sm:text-lg font-extrabold text-amber-400 block animate-pulse">18</span>
+                            <span class="text-[8px] uppercase font-sans text-slate-400 block font-bold">DETIK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Good Deals Product Cards Grid -->
+            <div id="good-deals-grid" class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4 w-full min-w-0">
+                <!-- Injected via JavaScript -->
             </div>
         </div>
     </section>
@@ -1202,8 +1260,192 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             fetchProducts();
+            const savedDeals = localStorage.getItem('luxetime_good_deals');
+            const dealsToRender = savedDeals ? JSON.parse(savedDeals) : fallbackGoodDeals;
+            renderGoodDeals(dealsToRender);
+            initPromoCountdown();
             loadStateFromLocalStorage();
         });
+
+        // Dataset Special Good Deals / Flash Sale Promo (Extracted from preownedwatch-id.com)
+        const fallbackGoodDeals = [
+            {
+                id: 101,
+                brand: "Rolex",
+                model: "DATEJUST 36MM TWO-TONE TURN-O-GRAPH (2008)",
+                reference: "116263",
+                condition: "Very Mint Condition",
+                production_year: 2008,
+                original_price: 108000000,
+                price: 98000000,
+                discount_tag: "HEMAT 10 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/ROLEXDATEJUST36MMTWOTONE-1.jpg?v=1787821311"
+            },
+            {
+                id: 102,
+                brand: "Tudor",
+                model: "BLACK BAY CHRONO 'BUMBLEBEE' YELLOW DIAL (2026)",
+                reference: "79310N-0001",
+                condition: "Never Been Worn",
+                production_year: 2026,
+                original_price: 178000000,
+                price: 168000000,
+                discount_tag: "HEMAT 10 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/tudor-black-bay-bumblebee-_1.jpg?v=1783502793"
+            },
+            {
+                id: 103,
+                brand: "Rolex",
+                model: "GMT MASTER-II BLACK PANTHER (2018)",
+                reference: "116710LN",
+                condition: "Very Mint Condition",
+                production_year: 2018,
+                original_price: 245000000,
+                price: 235000000,
+                discount_tag: "HEMAT 10 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/rolex-black-panther-indonesia-_1_07dcd209-4971-4945-9446-7076d408b4e3.jpg?v=1786705008"
+            },
+            {
+                id: 104,
+                brand: "Tudor",
+                model: "BLACK BAY 58 925 SILVER TAUPE DIAL (2026)",
+                reference: "79010SG-0002",
+                condition: "Never Been Worn",
+                production_year: 2026,
+                original_price: 69500000,
+                price: 67000000,
+                discount_tag: "HEMAT 2.5 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/tudor-black-bay-58-925-silver-taupe-_1.jpg?v=1786076447"
+            },
+            {
+                id: 105,
+                brand: "Rolex",
+                model: "DATEJUST 31MM PINK ROMAN DIAL (2012)",
+                reference: "178240",
+                condition: "Very Mint Condition",
+                production_year: 2012,
+                original_price: 145000000,
+                price: 140000000,
+                discount_tag: "HEMAT 5 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/Rolex-Datejust-31-Pink-Roman-Indonesia-_1.jpg?v=1761824752"
+            },
+            {
+                id: 106,
+                brand: "Rolex",
+                model: "YACHT-MASTER 40MM RHODIUM PLATINUM (2020)",
+                reference: "126622",
+                condition: "Very Mint Condition",
+                production_year: 2020,
+                original_price: 235000000,
+                price: 229800000,
+                discount_tag: "HEMAT 5.2 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/rolex-yacht-master-rhodium-indonesia-_1.jpg?v=1784778882"
+            },
+            {
+                id: 107,
+                brand: "Corum",
+                model: "ADMIRAL'S CUP CHRONO BLACK PVD LIMITED (WATCH ONLY)",
+                reference: "01.0077",
+                condition: "Very Mint Condition",
+                production_year: 2022,
+                original_price: 30000000,
+                price: 27000000,
+                discount_tag: "HEMAT 10%",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/corum-admirals-cup-_1.jpg?v=1785313859"
+            },
+            {
+                id: 108,
+                brand: "Tudor",
+                model: "BLACK BAY ONE 36 ANTHRACITE GREY DIAL (2026)",
+                reference: "79640-0001",
+                condition: "Never Been Worn",
+                production_year: 2026,
+                original_price: 66000000,
+                price: 64000000,
+                discount_tag: "HEMAT 2 JT",
+                availability: "AVAILABLE",
+                image_url: "https://www.preownedwatch-id.com/cdn/shop/files/tudor-black-bay-one-36-anthracite-grey-_1.jpg?v=1786076186"
+            }
+        ];
+
+        function renderGoodDeals(deals) {
+            const grid = document.getElementById('good-deals-grid');
+            if (!grid) return;
+            grid.innerHTML = deals.map(item => `
+                <article class="min-w-0 bg-slate-900/90 rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between cursor-pointer group shadow-xl hover:border-rose-500/50 transition-all duration-300 hover:-translate-y-1" onclick="openPDPModal(${item.id})">
+                    <div>
+                        <!-- Image Container with Discount Badge -->
+                        <div class="aspect-square bg-slate-950 relative overflow-hidden flex items-center justify-center p-2">
+                            <img src="${item.image_url}" alt="${item.model}" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Discount Savings Badge -->
+                            <div class="absolute top-2.5 left-2.5 bg-gradient-to-r from-rose-600 to-amber-500 text-white text-[9px] sm:text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-md tracking-wider uppercase flex items-center gap-1">
+                                <span>⚡</span> ${item.discount_tag || 'GOOD DEAL'}
+                            </div>
+
+                            <!-- Heart Wishlist -->
+                            <button onclick="event.stopPropagation(); toggleWishlist(${item.id})" class="absolute bottom-2.5 right-2.5 bg-slate-900/80 backdrop-blur-md p-1.5 rounded-full text-slate-400 hover:text-rose-500 transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            </button>
+                        </div>
+
+                        <!-- Detail Section -->
+                        <div class="p-3 sm:p-4">
+                            <p class="text-[10px] font-extrabold text-rose-400 uppercase tracking-widest">${item.brand}</p>
+                            <h3 class="line-clamp-2 text-xs sm:text-sm font-bold text-white mt-1 group-hover:text-rose-400 transition-colors uppercase leading-tight font-sans">
+                                ${item.model}
+                            </h3>
+                            <p class="text-[10px] text-slate-400 font-medium mt-1">Ref. ${item.reference}</p>
+                        </div>
+                    </div>
+
+                    <!-- Price & Action Section -->
+                    <div class="p-3 sm:p-4 pt-0">
+                        <div class="border-t border-slate-800/80 pt-2 mb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-semibold font-sans">${formatIDR(item.original_price)}</span>
+                                <span class="text-[9px] bg-rose-500/20 text-rose-400 px-1.5 py-0.5 rounded font-bold">SALE</span>
+                            </div>
+                            <span class="text-xs sm:text-sm md:text-base font-extrabold text-amber-400 font-sans block mt-0.5">${formatIDR(item.price)}</span>
+                        </div>
+
+                        <button onclick="event.stopPropagation(); addToCart(${item.id})" class="min-h-[40px] sm:min-h-[44px] w-full bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-md shadow-rose-600/30 flex items-center justify-center">
+                            + KERANJANG
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function initPromoCountdown() {
+            let targetDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000);
+            setInterval(() => {
+                const now = new Date().getTime();
+                const diff = targetDate - now;
+                if (diff <= 0) return;
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const dEl = document.getElementById('promo-timer-days');
+                const hEl = document.getElementById('promo-timer-hours');
+                const mEl = document.getElementById('promo-timer-mins');
+                const sEl = document.getElementById('promo-timer-secs');
+
+                if (dEl) dEl.textContent = String(d).padStart(2, '0');
+                if (hEl) hEl.textContent = String(h).padStart(2, '0');
+                if (mEl) mEl.textContent = String(m).padStart(2, '0');
+                if (sEl) sEl.textContent = String(s).padStart(2, '0');
+            }, 1000);
+        }
 
         // 1. Fetch Katalog Jam Tangan dari Laravel API / Static JSON Endpoint
         async function fetchProducts() {

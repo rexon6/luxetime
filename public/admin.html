@@ -233,6 +233,10 @@
                     class="flex-1 py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-slate-50 text-slate-600 hover:bg-blue-50 hover:text-blue-600 border border-slate-200/80">
                     Permintaan LuxeSource
                 </button>
+                <button onclick="switchTab('promo')" id="tab-btn-promo"
+                    class="flex-1 py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-slate-50 text-slate-600 hover:bg-rose-50 hover:text-rose-600 border border-slate-200/80 flex items-center justify-center gap-1">
+                    <span>🔥</span> Good Deals & Flash Sale
+                </button>
             </div>
 
             <!-- TAB 1: Upload Produk Baru Form -->
@@ -462,6 +466,114 @@
                     </table>
                 </div>
             </div>
+
+            <!-- TAB 5: Good Deals & Flash Sale Management -->
+            <div id="tab-content-promo" class="hidden bg-white rounded-3xl border border-slate-200/80 shadow-sm mb-8 overflow-hidden">
+                <!-- Tab Header -->
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 p-6 sm:p-8">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-gradient-to-r from-rose-600 to-amber-500 text-white text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full flex items-center gap-1">
+                                    <span>⚡</span> FLASH SALE
+                                </span>
+                            </div>
+                            <h2 class="text-2xl font-bebas tracking-wide text-white uppercase">MANAJEMEN GOOD DEALS & PROMO</h2>
+                            <p class="text-slate-400 text-xs font-medium mt-1">Tambah, edit, atau hapus produk promo dengan potongan harga eksklusif yang tampil di halaman utama.</p>
+                        </div>
+                        <button onclick="openPromoForm()" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-5 py-3 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg shadow-rose-500/30 flex items-center gap-2 shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                            Tambah Promo Baru
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Promo Form (hidden by default) -->
+                <div id="promo-form-wrapper" class="hidden border-b border-slate-200 bg-slate-50/70 p-6 sm:p-8">
+                    <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider border-l-4 border-rose-600 pl-3 mb-4">Form Tambah / Edit Produk Promo</h3>
+                    <form id="promo-form" onsubmit="handlePromoSave(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs font-medium">
+                        <input type="hidden" id="promo-edit-id">
+                        <div class="min-w-0">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">Brand <span class="text-rose-500">*</span></label>
+                            <input type="text" id="promo-brand" required placeholder="Rolex / Tudor / AP"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0 sm:col-span-2">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">Nama Model <span class="text-rose-500">*</span></label>
+                            <input type="text" id="promo-model" required placeholder="GMT Master-II Black Panther (2018)"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">No. Referensi</label>
+                            <input type="text" id="promo-reference" placeholder="116710LN"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">Harga Normal (IDR) <span class="text-rose-500">*</span></label>
+                            <input type="number" id="promo-original-price" required placeholder="245000000"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">Harga Promo (IDR) <span class="text-rose-500">*</span></label>
+                            <input type="number" id="promo-price" required placeholder="235000000"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">Label Diskon</label>
+                            <input type="text" id="promo-discount-tag" placeholder="HEMAT 10 JT / HEMAT 10%"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0 sm:col-span-2">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">URL Foto Produk <span class="text-rose-500">*</span></label>
+                            <input type="url" id="promo-image-url" required placeholder="https://cdn.shopify.com/...jpg"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="min-w-0">
+                            <label class="block uppercase font-bold text-slate-700 mb-1">Kondisi</label>
+                            <input type="text" id="promo-condition" placeholder="Very Mint / Never Been Worn"
+                                class="w-full min-w-0 bg-white border border-slate-200 rounded-xl p-3 text-slate-900 font-semibold outline-none focus:bg-white focus:border-rose-500 transition-all">
+                        </div>
+                        <div class="sm:col-span-2 lg:col-span-3 flex gap-3 pt-2">
+                            <button type="submit" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md shadow-rose-500/20 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Simpan Produk Promo
+                            </button>
+                            <button type="button" onclick="closePromoForm()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition-all">
+                                Batal
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Active Promo Table -->
+                <div class="p-6 sm:p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider">Daftar Good Deals Aktif (<span id="promo-count">0</span> produk)</h3>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] text-slate-400 font-medium">Live countdown tersisa:</span>
+                            <span id="admin-promo-timer" class="text-xs font-bold font-mono text-rose-600 bg-rose-50 border border-rose-200 px-2.5 py-1 rounded-lg">--:--:--</span>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto custom-scrollbar">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-rose-50/70 font-bold uppercase text-slate-700 border-b border-rose-100">
+                                <tr>
+                                    <th class="p-3">Foto</th>
+                                    <th class="p-3">Brand & Model</th>
+                                    <th class="p-3">Ref.</th>
+                                    <th class="p-3">Harga Normal</th>
+                                    <th class="p-3">Harga Promo</th>
+                                    <th class="p-3">Label</th>
+                                    <th class="p-3 text-right">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="promo-table-body" class="divide-y divide-slate-100 font-medium text-slate-700">
+                                <!-- Injected via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Admin Footer -->
@@ -481,6 +593,24 @@
         document.addEventListener('DOMContentLoaded', () => {
             checkAuthSession();
         });
+
+        // Authentication Session Gate
+        function checkAuthSession() {
+            const adminToken = localStorage.getItem('luxetime_admin_token');
+            const portal = document.getElementById('admin-login-portal');
+            const layout = document.getElementById('admin-dashboard-layout');
+            if (adminToken) {
+                portal.classList.add('hidden');
+                layout.classList.remove('hidden');
+                fetchAdminProducts();
+                fetchSellOffers();
+                fetchSourcingRequests();
+                loadGoodDeals();
+            } else {
+                portal.classList.remove('hidden');
+                layout.classList.add('hidden');
+            }
+        }
 
         // Image File Selection Preview
         function previewImageFile(input) {
@@ -503,24 +633,6 @@
             document.getElementById('upload-file-input').value = '';
             document.getElementById('upload-empty-view').classList.remove('hidden');
             document.getElementById('upload-preview-view').classList.add('hidden');
-        }
-
-        // 1. Authentication Session Gate
-        function checkAuthSession() {
-            const adminToken = localStorage.getItem('luxetime_admin_token');
-            const portal = document.getElementById('admin-login-portal');
-            const layout = document.getElementById('admin-dashboard-layout');
-
-            if (adminToken) {
-                portal.classList.add('hidden');
-                layout.classList.remove('hidden');
-                fetchAdminProducts();
-                fetchSellOffers();
-                fetchSourcingRequests();
-            } else {
-                portal.classList.remove('hidden');
-                layout.classList.add('hidden');
-            }
         }
 
         // Handle Login Submission via API
@@ -573,17 +685,155 @@
 
         // Tab Switching Logic
         function switchTab(tabName) {
-            ['upload', 'katalog', 'offers', 'sourcing'].forEach(t => {
+            ['upload', 'katalog', 'offers', 'sourcing', 'promo'].forEach(t => {
                 document.getElementById(`tab-content-${t}`).classList.add('hidden');
                 const btn = document.getElementById(`tab-btn-${t}`);
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+                btn.classList.remove('bg-blue-600', 'bg-rose-600', 'text-white', 'shadow-md', 'shadow-blue-500/20', 'shadow-rose-500/20');
                 btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200/80');
             });
 
             document.getElementById(`tab-content-${tabName}`).classList.remove('hidden');
             const activeBtn = document.getElementById(`tab-btn-${tabName}`);
             activeBtn.classList.remove('bg-slate-50', 'text-slate-600', 'border-slate-200/80');
-            activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+            if (tabName === 'promo') {
+                activeBtn.classList.add('bg-rose-600', 'text-white', 'shadow-md', 'shadow-rose-500/20');
+            } else {
+                activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/20');
+            }
+        }
+
+        // ========== GOOD DEALS / PROMO MANAGEMENT ==========
+        const PROMO_STORAGE_KEY = 'luxetime_good_deals';
+        let goodDeals = [];
+
+        function loadGoodDeals() {
+            const saved = localStorage.getItem(PROMO_STORAGE_KEY);
+            goodDeals = saved ? JSON.parse(saved) : [
+                { id: 101, brand: 'Rolex', model: 'DATEJUST 36MM TWO-TONE TURN-O-GRAPH (2008)', reference: '116263', condition: 'Very Mint', original_price: 108000000, price: 98000000, discount_tag: 'HEMAT 10 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/ROLEXDATEJUST36MMTWOTONE-1.jpg?v=1787821311' },
+                { id: 102, brand: 'Tudor', model: "BLACK BAY CHRONO 'BUMBLEBEE' YELLOW DIAL (2026)", reference: '79310N-0001', condition: 'Never Been Worn', original_price: 178000000, price: 168000000, discount_tag: 'HEMAT 10 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/tudor-black-bay-bumblebee-_1.jpg?v=1783502793' },
+                { id: 103, brand: 'Rolex', model: 'GMT MASTER-II BLACK PANTHER (2018)', reference: '116710LN', condition: 'Very Mint', original_price: 245000000, price: 235000000, discount_tag: 'HEMAT 10 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/rolex-black-panther-indonesia-_1_07dcd209-4971-4945-9446-7076d408b4e3.jpg?v=1786705008' },
+                { id: 104, brand: 'Tudor', model: 'BLACK BAY 58 925 SILVER TAUPE DIAL (2026)', reference: '79010SG-0002', condition: 'Never Been Worn', original_price: 69500000, price: 67000000, discount_tag: 'HEMAT 2.5 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/tudor-black-bay-58-925-silver-taupe-_1.jpg?v=1786076447' },
+                { id: 105, brand: 'Rolex', model: 'DATEJUST 31MM PINK ROMAN DIAL (2012)', reference: '178240', condition: 'Very Mint', original_price: 145000000, price: 140000000, discount_tag: 'HEMAT 5 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/Rolex-Datejust-31-Pink-Roman-Indonesia-_1.jpg?v=1761824752' },
+                { id: 106, brand: 'Rolex', model: 'YACHT-MASTER 40MM RHODIUM PLATINUM (2020)', reference: '126622', condition: 'Very Mint', original_price: 235000000, price: 229800000, discount_tag: 'HEMAT 5.2 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/rolex-yacht-master-rhodium-indonesia-_1.jpg?v=1784778882' },
+                { id: 107, brand: 'Corum', model: "ADMIRAL'S CUP CHRONO BLACK PVD LIMITED", reference: '01.0077', condition: 'Very Mint', original_price: 30000000, price: 27000000, discount_tag: 'HEMAT 10%', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/corum-admirals-cup-_1.jpg?v=1785313859' },
+                { id: 108, brand: 'Tudor', model: 'BLACK BAY ONE 36 ANTHRACITE GREY DIAL (2026)', reference: '79640-0001', condition: 'Never Been Worn', original_price: 66000000, price: 64000000, discount_tag: 'HEMAT 2 JT', image_url: 'https://www.preownedwatch-id.com/cdn/shop/files/tudor-black-bay-one-36-anthracite-grey-_1.jpg?v=1786076186' }
+            ];
+            renderPromoTable();
+            initAdminPromoTimer();
+        }
+
+        function saveGoodDeals() {
+            localStorage.setItem(PROMO_STORAGE_KEY, JSON.stringify(goodDeals));
+        }
+
+        function renderPromoTable() {
+            const tbody = document.getElementById('promo-table-body');
+            const countEl = document.getElementById('promo-count');
+            if (countEl) countEl.textContent = goodDeals.length;
+            if (goodDeals.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="7" class="p-6 text-center text-slate-400 font-semibold">Belum ada produk promo. Klik "Tambah Promo Baru" untuk memulai.</td></tr>`;
+                return;
+            }
+            tbody.innerHTML = goodDeals.map(d => `
+                <tr class="hover:bg-rose-50/20 transition-colors border-b border-slate-100">
+                    <td class="p-3">
+                        <img src="${d.image_url}" class="w-12 h-12 object-cover rounded-xl border border-slate-200 bg-slate-100">
+                    </td>
+                    <td class="p-3 font-semibold text-slate-900">
+                        <span class="text-[10px] text-rose-600 block uppercase font-extrabold">${d.brand}</span>
+                        <span class="line-clamp-2">${d.model}</span>
+                    </td>
+                    <td class="p-3 font-mono text-slate-500">${d.reference || '-'}</td>
+                    <td class="p-3 text-slate-400 line-through font-semibold">${formatIDR(d.original_price)}</td>
+                    <td class="p-3 font-extrabold text-rose-600">${formatIDR(d.price)}</td>
+                    <td class="p-3">
+                        <span class="bg-gradient-to-r from-rose-100 to-amber-100 text-rose-700 border border-rose-200 px-2.5 py-0.5 rounded-full font-bold text-[10px] uppercase">⚡ ${d.discount_tag || 'PROMO'}</span>
+                    </td>
+                    <td class="p-3 text-right">
+                        <div class="flex items-center justify-end gap-2">
+                            <button onclick="editPromo(${d.id})" class="bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold px-3 py-1.5 rounded-lg border border-blue-200 transition-all text-[10px] uppercase">Edit</button>
+                            <button onclick="deletePromo(${d.id})" class="bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold px-3 py-1.5 rounded-lg border border-rose-200 transition-all text-[10px] uppercase">Hapus</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function openPromoForm() {
+            document.getElementById('promo-form').reset();
+            document.getElementById('promo-edit-id').value = '';
+            document.getElementById('promo-form-wrapper').classList.remove('hidden');
+            document.getElementById('promo-form-wrapper').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closePromoForm() {
+            document.getElementById('promo-form-wrapper').classList.add('hidden');
+            document.getElementById('promo-form').reset();
+            document.getElementById('promo-edit-id').value = '';
+        }
+
+        function editPromo(id) {
+            const d = goodDeals.find(x => x.id === id);
+            if (!d) return;
+            document.getElementById('promo-edit-id').value = d.id;
+            document.getElementById('promo-brand').value = d.brand;
+            document.getElementById('promo-model').value = d.model;
+            document.getElementById('promo-reference').value = d.reference || '';
+            document.getElementById('promo-original-price').value = d.original_price;
+            document.getElementById('promo-price').value = d.price;
+            document.getElementById('promo-discount-tag').value = d.discount_tag || '';
+            document.getElementById('promo-image-url').value = d.image_url;
+            document.getElementById('promo-condition').value = d.condition || '';
+            document.getElementById('promo-form-wrapper').classList.remove('hidden');
+            document.getElementById('promo-form-wrapper').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function deletePromo(id) {
+            if (!confirm('Hapus produk promo ini dari Good Deals?')) return;
+            goodDeals = goodDeals.filter(x => x.id !== id);
+            saveGoodDeals();
+            renderPromoTable();
+            triggerToast('Produk promo berhasil dihapus.');
+        }
+
+        function handlePromoSave(e) {
+            e.preventDefault();
+            const editId = document.getElementById('promo-edit-id').value;
+            const newDeal = {
+                id: editId ? parseInt(editId) : Date.now(),
+                brand: document.getElementById('promo-brand').value,
+                model: document.getElementById('promo-model').value,
+                reference: document.getElementById('promo-reference').value,
+                original_price: parseInt(document.getElementById('promo-original-price').value),
+                price: parseInt(document.getElementById('promo-price').value),
+                discount_tag: document.getElementById('promo-discount-tag').value || 'PROMO',
+                image_url: document.getElementById('promo-image-url').value,
+                condition: document.getElementById('promo-condition').value,
+                availability: 'AVAILABLE'
+            };
+            if (editId) {
+                goodDeals = goodDeals.map(x => x.id === parseInt(editId) ? newDeal : x);
+                triggerToast('Produk promo berhasil diperbarui!');
+            } else {
+                goodDeals.push(newDeal);
+                triggerToast('Produk promo baru berhasil ditambahkan!');
+            }
+            saveGoodDeals();
+            renderPromoTable();
+            closePromoForm();
+        }
+
+        function initAdminPromoTimer() {
+            const targetDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000);
+            setInterval(() => {
+                const diff = targetDate - new Date().getTime();
+                if (diff <= 0) return;
+                const h = Math.floor(diff / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+                const el = document.getElementById('admin-promo-timer');
+                if (el) el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+            }, 1000);
         }
 
         // Fetch Products from API
