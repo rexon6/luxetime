@@ -107,23 +107,23 @@
     </a>
 
     <!-- TOP AUTO-SLIDING ANNOUNCEMENT TICKER (Soft Blue Palette - Auto Slide) -->
-    <div class="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white text-xs font-semibold py-2.5 px-4 border-b border-blue-500/40 shadow-sm relative z-50 select-none overflow-hidden">
+    <div class="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600 text-white py-2.5 sm:py-3 px-4 border-b border-blue-500/40 shadow-sm relative z-50 select-none">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-            <button onclick="prevTopTicker()" class="text-blue-200 hover:text-white p-1 transition-colors text-sm font-bold shrink-0" aria-label="Previous">&lsaquo;</button>
+            <button onclick="prevTopTicker()" class="text-blue-100 hover:text-white hover:bg-white/10 rounded-full w-7 h-7 flex items-center justify-center transition-colors text-base font-bold shrink-0 cursor-pointer" aria-label="Previous">&lsaquo;</button>
 
-            <div class="flex-1 overflow-hidden relative h-5 text-center flex items-center justify-center cursor-pointer" onclick="openSellModal()">
-                <div id="top-ticker-slide-0" class="top-ticker-item transition-all duration-500 transform translate-y-0 opacity-100 font-semibold tracking-wide text-xs sm:text-xs text-white">
+            <div class="flex-1 overflow-hidden relative h-7 sm:h-8 text-center flex items-center justify-center cursor-pointer" onclick="openSellModal()">
+                <div id="top-ticker-slide-0" class="top-ticker-item absolute inset-0 w-full h-full transition-all duration-500 transform translate-y-0 opacity-100 font-semibold tracking-wide text-[11px] sm:text-xs md:text-sm text-white flex items-center justify-center leading-normal px-2">
                     100% Authentic & Original Luxury Timepieces Guaranteed
                 </div>
-                <div id="top-ticker-slide-1" class="top-ticker-item transition-all duration-500 transform translate-y-8 opacity-0 absolute font-semibold tracking-wide text-xs sm:text-xs text-white">
+                <div id="top-ticker-slide-1" class="top-ticker-item absolute inset-0 w-full h-full transition-all duration-500 transform translate-y-8 opacity-0 pointer-events-none font-semibold tracking-wide text-[11px] sm:text-xs md:text-sm text-white flex items-center justify-center leading-normal px-2">
                     Layanan Konsinyasi & Buyback Transparan Dengan Valuasi Resmi
                 </div>
-                <div id="top-ticker-slide-2" class="top-ticker-item transition-all duration-500 transform translate-y-8 opacity-0 absolute font-semibold tracking-wide text-xs sm:text-xs text-white">
+                <div id="top-ticker-slide-2" class="top-ticker-item absolute inset-0 w-full h-full transition-all duration-500 transform translate-y-8 opacity-0 pointer-events-none font-semibold tracking-wide text-[11px] sm:text-xs md:text-sm text-white flex items-center justify-center leading-normal px-2">
                     Gratis Pengiriman & Asuransi Ke Seluruh Wilayah Indonesia
                 </div>
             </div>
 
-            <button onclick="nextTopTicker()" class="text-blue-200 hover:text-white p-1 transition-colors text-sm font-bold shrink-0" aria-label="Next">&rsaquo;</button>
+            <button onclick="nextTopTicker()" class="text-blue-100 hover:text-white hover:bg-white/10 rounded-full w-7 h-7 flex items-center justify-center transition-colors text-base font-bold shrink-0 cursor-pointer" aria-label="Next">&rsaquo;</button>
         </div>
     </div>
 
@@ -1342,11 +1342,11 @@
                 const slide = document.getElementById(`top-ticker-slide-${i}`);
                 if (!slide) continue;
                 if (i === index) {
-                    slide.classList.remove('translate-y-8', 'opacity-0', 'absolute');
-                    slide.classList.add('translate-y-0', 'opacity-100', 'relative');
+                    slide.classList.remove('translate-y-8', 'opacity-0', 'pointer-events-none');
+                    slide.classList.add('translate-y-0', 'opacity-100');
                 } else {
-                    slide.classList.remove('translate-y-0', 'opacity-100', 'relative');
-                    slide.classList.add('translate-y-8', 'opacity-0', 'absolute');
+                    slide.classList.remove('translate-y-0', 'opacity-100');
+                    slide.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
                 }
             }
             currentTopTickerIndex = index;
